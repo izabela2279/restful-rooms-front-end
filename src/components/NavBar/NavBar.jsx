@@ -1,6 +1,6 @@
 import { NavLink } from 'react-router-dom'
-// import styles from './NavBar.module.css'
-// import Logo from '../../assets/branding/logo.svg'
+import styles from './NavBar.css'
+
 
 const NavBar = ({ user, handleLogout }) => {
 
@@ -18,7 +18,8 @@ const NavBar = ({ user, handleLogout }) => {
   )
 
   return (
-    <nav>
+    <nav className={styles.container}>
+        <NavLink to={'/'}><img src="assets/restful-logo_adobe_express (1).svg"  alt="restful-logo" style={{width: 50, height: 50}} /></NavLink>
       {user ? protectedLinks : publicLinks}
     </nav>
   )
