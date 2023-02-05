@@ -1,5 +1,5 @@
 // npm modules
-import { useState,useEffect } from 'react'
+import { useState, useEffect } from 'react'
 import { Routes, Route, useNavigate, Navigate } from 'react-router-dom'
 
 // page components
@@ -23,6 +23,7 @@ import './App.css'
 
 const App = () => {
   const [user, setUser] = useState(authService.getUser())
+  const [listings, setListings] = useState([])
   const navigate = useNavigate()
 
   const handleLogout = () => {
@@ -34,6 +35,14 @@ const App = () => {
   const handleSignupOrLogin = () => {
     setUser(authService.getUser())
   }
+
+  useEffect(() => {
+    const fetchAllListings = async () => {
+      const data = await listingService.index()
+      setListings(data)
+    }
+    fetchAllListings()
+  }, [user])
 
   return (
     <>
@@ -68,7 +77,7 @@ const App = () => {
           path="/listings"
           element={
             <ProtectedRoute user={user}>
-              <AllListings />
+              <AllListings listings={listings}/>
             </ProtectedRoute>
           }
         />
