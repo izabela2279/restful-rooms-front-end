@@ -1,5 +1,5 @@
 // npm modules
-import { useState } from 'react'
+import { useState,useEffect } from 'react'
 import { Routes, Route, useNavigate, Navigate } from 'react-router-dom'
 
 // page components
@@ -8,6 +8,7 @@ import Login from './pages/Login/Login'
 import Landing from './pages/Landing/Landing'
 import Profiles from './pages/Profiles/Profiles'
 import ChangePassword from './pages/ChangePassword/ChangePassword'
+import AllListings from './pages/AllListings/AllListings'
 
 // components
 import NavBar from './components/NavBar/NavBar'
@@ -15,6 +16,7 @@ import ProtectedRoute from './components/ProtectedRoute/ProtectedRoute'
 
 // services
 import * as authService from './services/authService'
+import * as listingService from './services/listingService'
 
 // styles
 import './App.css'
@@ -62,6 +64,15 @@ const App = () => {
             </ProtectedRoute>
           }
         />
+          <Route
+          path="/listings"
+          element={
+            <ProtectedRoute user={user}>
+              <AllListings />
+            </ProtectedRoute>
+          }
+        />
+        
       </Routes>
     </>
   )
