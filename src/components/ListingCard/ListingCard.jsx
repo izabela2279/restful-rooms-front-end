@@ -16,14 +16,8 @@ const ListingCard = ({ listing }) => {
           </span>
           {/* <AuthorInfo content={listing} /> */}
         </header>
-        <p>{listing.description}</p>
-        <p>{listing.bedrooms}</p>
-        <p>{listing.beds}</p>
-        <p>{listing.baths}</p>
-        <p>{listing.guests}</p>
-        <p>{listing.reviews}</p>
-        <p>{listing.reservations}</p>
-        <p>{listing.activities}</p>
+       
+        
       </article>
     </Link>
   )
