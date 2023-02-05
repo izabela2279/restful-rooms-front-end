@@ -1,9 +1,18 @@
-import styles from './Landing.module.css'
+import style from './Landing.module.css'
 
-const Landing = ({ user }) => {
+const Landing = () => {
+  
   return (
-    <main className={styles.container}>
-      <h1>hello, {user ? user.name : 'friend'}</h1>
+    <main className={ style.container}>
+      <div id="welcome">
+      <h1> A place you can find your home away from home or share you home to weary engineers. </h1>
+
+      <h2> </h2>
+      </div>
+      <div id="landing-image">
+        <img  id="landing-image"src='assets/Landing/landing-pic1.jpeg'></img>
+      </div>
+     
     </main>
   )
 }

@@ -1,21 +1,26 @@
-import { Link } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
+import './NavBar.css'
+
 
 const NavBar = ({ user, handleLogout }) => {
+
+  const publicLinks = (
+    <ul>
+      <li><NavLink to="/login">LOG IN</NavLink></li>
+      <li><NavLink to="/signup">SIGN UP</NavLink></li>
+    </ul>
+  )
+
+  const protectedLinks = (
+    <ul>
+      <li><NavLink to="/logout" onClick={handleLogout}>LOG OUT</NavLink></li>
+    </ul>
+  )
+
   return (
-    <nav>
-      {user ?
-        <ul>
-          <li>Welcome, {user.name}</li>
-          <li><Link to="/profiles">Profiles</Link></li>
-          <li><Link to="" onClick={handleLogout}>LOG OUT</Link></li>
-          <li><Link to="/change-password">Change Password</Link></li>
-        </ul>
-      :
-        <ul>
-          <li><Link to="/login">Log In</Link></li>
-          <li><Link to="/signup">Sign Up</Link></li>
-        </ul>
-      }
+    <nav className="container">
+        <NavLink to={'/'}><img src="assets/restful-logo_adobe_express (1).svg"  alt="restful-logo" style={{width: 80, height: 80}} /></NavLink>
+      {user ? protectedLinks : publicLinks}
     </nav>
   )
 }
