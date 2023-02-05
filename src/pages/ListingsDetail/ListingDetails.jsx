@@ -8,11 +8,12 @@ import * as listingService from "../../services/listingService"
 
 
 const ListingDetails = (props) => {
+    const { id } = useParams()
     return (
-      <main>
-        Details
-      </main>
+        <main>
+            Details
+        </main>
     )
-  }
-  
-  export default ListingDetails
+}
+
+export default ListingDetails
