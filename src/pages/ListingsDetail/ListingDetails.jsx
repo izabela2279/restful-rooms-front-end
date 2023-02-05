@@ -9,7 +9,7 @@ import * as listingService from "../../services/listingService"
 
 const ListingDetails = (props) => {
     const { id } = useParams()
-    const [listing, setListing]
+    const [listing, setListing]=useState(null)
     return (
         <main>
             Details
