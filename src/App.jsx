@@ -9,6 +9,7 @@ import Landing from './pages/Landing/Landing'
 import Profiles from './pages/Profiles/Profiles'
 import ChangePassword from './pages/ChangePassword/ChangePassword'
 import AllListings from './pages/AllListings/AllListings'
+import ListingDetails from './pages/ListingsDetail/ListingDetails'
 
 // components
 import NavBar from './components/NavBar/NavBar'
