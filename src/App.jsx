@@ -23,6 +23,7 @@ import './App.css'
 
 const App = () => {
   const [user, setUser] = useState(authService.getUser())
+  const [listings, setListings] = useState([])
   const navigate = useNavigate()
 
   const handleLogout = () => {
@@ -38,9 +39,9 @@ const App = () => {
   useEffect(() => {
     const fetchAllListings = async () => {
       const data = await listingService.index()
-      console.log('Listing Data:', data)
+      setListings(data)
     }
-    if (user) fetchAllListings()
+    fetchAllListings()
   }, [user])
 
   return (
@@ -76,7 +77,7 @@ const App = () => {
           path="/listings"
           element={
             <ProtectedRoute user={user}>
-              <AllListings />
+              <AllListings listings={listings}/>
             </ProtectedRoute>
           }
         />
