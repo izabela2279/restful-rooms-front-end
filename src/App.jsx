@@ -82,6 +82,14 @@ const App = () => {
             </ProtectedRoute>
           }
         />
+          <Route
+          path="/listings/:id"
+          element={
+            <ProtectedRoute user={user}>
+              <ListingDetails user={user}/>
+            </ProtectedRoute>
+          }
+        />
         
       </Routes>
     </>
