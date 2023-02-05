@@ -63,6 +63,15 @@ const App = () => {
             </ProtectedRoute>
           }
         />
+          <Route
+          path="/listings"
+          element={
+            <ProtectedRoute user={user}>
+              <AllListings />
+            </ProtectedRoute>
+          }
+        />
+        
       </Routes>
     </>
   )
