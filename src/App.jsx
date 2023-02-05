@@ -1,5 +1,5 @@
 // npm modules
-import { useState,useEffect } from 'react'
+import { useState, useEffect } from 'react'
 import { Routes, Route, useNavigate, Navigate } from 'react-router-dom'
 
 // page components
@@ -34,6 +34,14 @@ const App = () => {
   const handleSignupOrLogin = () => {
     setUser(authService.getUser())
   }
+
+  useEffect(() => {
+    const fetchAllListings = async () => {
+      const data = await listingService.index()
+      console.log('Listing Data:', data)
+    }
+    if (user) fetchAllListings()
+  }, [user])
 
   return (
     <>
