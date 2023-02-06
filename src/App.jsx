@@ -37,6 +37,12 @@ const App = () => {
     setUser(authService.getUser())
   }
 
+  const handleAddListing = async (listingData) => {
+    const newListing = await listingService.create(listingData)
+    setBlogs([newListing, ...listings])
+    navigate('/listings')
+  }
+
   useEffect(() => {
     const fetchAllListings = async () => {
       const data = await listingService.index()
