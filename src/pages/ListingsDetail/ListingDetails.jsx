@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react"
-import { useParams } from "react-router-dom"
+import { useParams, Link } from "react-router-dom"
 import NewReview from "../../components/NewReview/NewReview";
 import styles from './ListingDetails.module.css'
 
@@ -9,7 +9,7 @@ import * as listingService from "../../services/listingService";
 
 const ListingDetails = (props) => {
     const { id } = useParams()
-    const [listing, setListing] = useState([])
+    const [listing, setListing] = useState(null)
     useEffect(() => {
         const fetchListing = async () => {
             const data = await listingService.show(id)
@@ -23,6 +23,8 @@ const ListingDetails = (props) => {
         setListing({ ...listing, reviews: [...listing.reviews, newReview] })
     }
 
+    console.log('Listing data', listing)
+    if (!listing) return <h1>Loading</h1>
     return (
         <>
             <main >
@@ -31,6 +33,19 @@ const ListingDetails = (props) => {
                 {listing.photo}
                 <p>{listing.bedrooms} {listing.beds} {listing.baths}{listing.guests}</p>
                 <p>{listing.description}</p>
+
+                <span>
+            {/* <AuthorInfo content={listing} /> */}
+
+            {listing.author._id === props.user.profile &&
+              <>
+                <Link to={`/listings/${id}/edit`} state={listing}>Edit</Link>
+                <button>Delete</button>
+              </>
+            }
+
+          </span>
+                
 
 
             </main>

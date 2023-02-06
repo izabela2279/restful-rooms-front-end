@@ -40,7 +40,6 @@ const create = async (listingData) => {
   }
 }
 
-
 const update = async (listingData) => {
   try {
     const res = await fetch(`${BASE_URL}/${listingData._id}`, {
