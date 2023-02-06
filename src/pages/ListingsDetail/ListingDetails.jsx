@@ -37,6 +37,11 @@ const ListingDetails = (props) => {
                 <p>{listing.description}</p>
             </main>
 
+            {/* <section>
+                <h1>Review</h1>
+                <NewReview handleAddReview={handleAddReview} />
+            </section>  */}
+
         </>
     )
 }
