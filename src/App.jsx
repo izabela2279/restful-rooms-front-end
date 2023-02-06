@@ -9,6 +9,8 @@ import Landing from './pages/Landing/Landing'
 import Profiles from './pages/Profiles/Profiles'
 import ChangePassword from './pages/ChangePassword/ChangePassword'
 import AllListings from './pages/AllListings/AllListings'
+import ListingDetails from './pages/ListingsDetail/ListingDetails'
+import NewListing from './pages/NewListing/NewListing'
 
 // components
 import NavBar from './components/NavBar/NavBar'
@@ -36,6 +38,18 @@ const App = () => {
     setUser(authService.getUser())
   }
 
+  const handleAddListing = async (listingData) => {
+    const newListing = await listingService.create(listingData)
+    setListings([newListing, ...listings])
+    navigate('/listings')
+  }
+
+  const handleUpdateListing = async (listingData) => {
+    const updatedListing = await listingService.update(listingData)
+    setListings(listings.map((b) => listingData._id === b._id ? updatedListing : b))
+    navigate('/listings')
+  }
+
   useEffect(() => {
     const fetchAllListings = async () => {
       const data = await listingService.index()
@@ -48,7 +62,7 @@ const App = () => {
     <>
       <NavBar user={user} handleLogout={handleLogout} />
       <Routes>
-        <Route path="/" element={<Landing/>} />
+        <Route path="/" element={<Landing />} />
         <Route
           path="/signup"
           element={<Signup handleSignupOrLogin={handleSignupOrLogin} />}
@@ -73,15 +87,32 @@ const App = () => {
             </ProtectedRoute>
           }
         />
-          <Route
+        <Route
           path="/listings"
           element={
             <ProtectedRoute user={user}>
-              <AllListings listings={listings}/>
+              <AllListings listings={listings} />
             </ProtectedRoute>
           }
         />
-        
+        <Route
+          path="/listings/:id"
+          element={
+            <ProtectedRoute user={user}>
+              <ListingDetails user={user} />
+            </ProtectedRoute>
+          }
+        />
+
+        <Route
+          path="/listings/new"
+          element={
+            <ProtectedRoute user={user}>
+              <NewListing handleAddListing={handleAddListing} />
+            </ProtectedRoute>
+          }
+        />
+
       </Routes>
     </>
   )
