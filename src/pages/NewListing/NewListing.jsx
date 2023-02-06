@@ -7,9 +7,11 @@ const NewListing = (props) => {
     location: '',
     price: '',
     description: '',
-    bedrooms: 0,
-    beds: 0,
-    baths: 0,
+    bedrooms: 1,
+    beds: 1,
+    baths: 1,
+    guests: 1
+    
   })
   const handleChange = ({ target }) => {
     setForm({ ...form, [target.name]: target.value })
