@@ -1,11 +1,10 @@
 import { useState, useEffect } from "react"
-import { useParams,Link } from "react-router-dom"
-import styles from './ListingDetails.module.css';
-
+import { useParams } from "react-router-dom"
+import NewReview from "../../components/NewReview/NewReview";
+import styles from './ListingDetails.module.css'
 
 //Services
 import * as listingService from "../../services/listingService";
-
 
 
 const ListingDetails = (props) => {
@@ -18,6 +17,12 @@ const ListingDetails = (props) => {
         }
         fetchListing()
     }, [id])
+
+    const handleAddReview = async (reviewData) => {
+        const newReview = await listingService.createReview(id, reviewData)
+        setListing({ ...listing, reviews: [...listing.reviews, newReview] })
+    }
+
     return (
         <>
             <main >
@@ -27,7 +32,14 @@ const ListingDetails = (props) => {
                 <p>{listing.bedrooms} {listing.beds} {listing.baths}{listing.guests}</p>
                 <p>{listing.description}</p>
 
+
             </main>
+
+            <section>
+                <h1>Review</h1>
+                <NewReview handleAddReview={handleAddReview} />
+            </section>
+
         </>
     )
 }

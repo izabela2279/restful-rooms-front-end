@@ -11,7 +11,7 @@ const NewListing = (props) => {
     beds: 1,
     baths: 1,
     guests: 1
-    
+
   })
   const handleChange = ({ target }) => {
     setForm({ ...form, [target.name]: target.value })
@@ -19,6 +19,17 @@ const NewListing = (props) => {
   const handleSubmit = (e) => {
     e.preventDefault()
     props.handleAddListing(form)
+  }
+
+  const [photoData, setPhotoData] = useState({
+
+  })
+  const handleChangePhoto = evt => {
+    setPhotoData({ photo: evt.target.files[0] })
+  }
+  const handlePhotoSubmit = evt => {
+    evt.preventDefault()
+    // props.handleAddPhoto(formData, photoData.photo)
   }
 
   return (
@@ -54,8 +65,8 @@ const NewListing = (props) => {
           placeholder="Price"
           onChange={handleChange}
         />
-         <label htmlFor="text-input">Description</label>
-				<textarea
+        <label htmlFor="text-input">Description</label>
+        <textarea
           required
           type="text"
           name="description"
@@ -81,7 +92,7 @@ const NewListing = (props) => {
           <option value="7">7</option>
           <option value="8">8</option>
         </select>
-        
+
         <label htmlFor="category-input">Beds</label>
         <select
           required
@@ -99,7 +110,7 @@ const NewListing = (props) => {
           <option value="7">7</option>
           <option value="8">8</option>
         </select>
-        
+
         <label htmlFor="category-input">Baths</label>
         <select
           required
@@ -117,7 +128,7 @@ const NewListing = (props) => {
           <option value="7">7</option>
           <option value="8">8</option>
         </select>
-        
+
         <label htmlFor="category-input">Guests</label>
         <select
           required
