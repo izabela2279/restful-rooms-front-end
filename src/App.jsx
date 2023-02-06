@@ -10,6 +10,7 @@ import Profiles from './pages/Profiles/Profiles'
 import ChangePassword from './pages/ChangePassword/ChangePassword'
 import AllListings from './pages/AllListings/AllListings'
 import ListingDetails from './pages/ListingsDetail/ListingDetails'
+import NewListing from './pages/NewListing/NewListing'
 
 // components
 import NavBar from './components/NavBar/NavBar'
