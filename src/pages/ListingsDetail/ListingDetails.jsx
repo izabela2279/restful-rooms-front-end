@@ -6,7 +6,6 @@ import styles from './ListingDetails.module.css'
 //Services
 import * as listingService from "../../services/listingService";
 
-
 const ListingDetails = (props) => {
     const { id } = useParams()
     const [listing, setListing] = useState(null)
@@ -21,6 +20,11 @@ const ListingDetails = (props) => {
     const handleAddReview = async (reviewData) => {
         const newReview = await listingService.createReview(id, reviewData)
         setListing({ ...listing, reviews: [...listing.reviews, newReview] })
+    }
+
+    const handleAddActivity = async (activityData) => {
+        const newActivity = await listingService.createActivity(id, activityData)
+        setListing({ ...listing, activities: [...listing.activities, newActivity] })
     }
 
     console.log('Listing data', listing)
@@ -54,7 +58,6 @@ const ListingDetails = (props) => {
                 <h1>Review</h1>
                 <NewReview handleAddReview={handleAddReview} />
             </section>
-
         </>
     )
 }
