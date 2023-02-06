@@ -52,10 +52,12 @@ const App = () => {
   }
 
   const handleDeleteListing = async (id) => {
+    console.log('HANDLE DELETE LISTING IS WORKING')
     const deletedListing = await listingService.deleteListing(id)
     setListings(listings.filter(b => b._id !== deletedListing._id))
     navigate('/listings')
   }
+  console.log(handleDeleteListing)
 
   useEffect(() => {
     const fetchAllListings = async () => {
@@ -102,20 +104,20 @@ const App = () => {
             </ProtectedRoute>
           }
         />
-        <Route
-          path="/listings/:id"
-          element={
-            <ProtectedRoute user={user}>
-              <ListingDetails user={user} />
-            </ProtectedRoute>
-          }
-        />
 
         <Route
           path="/listings/new"
           element={
             <ProtectedRoute user={user}>
               <NewListing handleAddListing={handleAddListing} />
+            </ProtectedRoute>
+          }
+        />
+         <Route
+          path="/listings/:id"
+          element={
+            <ProtectedRoute user={user}>
+              <ListingDetails user={user} handleDeleteListing={handleDeleteListing} />
             </ProtectedRoute>
           }
         />
@@ -131,14 +133,8 @@ const App = () => {
         />
 
 
-        <Route
-          path="/listings/:id"
-          element={
-            <ProtectedRoute user={user}>
-              <ListingDetails user={user} handleDeleteListing={handleDeleteListing} />
-            </ProtectedRoute>
-          }
-        />
+       
+        
 
       </Routes>
     </>
