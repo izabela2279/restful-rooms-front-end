@@ -29,10 +29,12 @@
   }
   
   .container button {
-    color: white;
+    color: black;
+   
     font-weight: 600;
     margin: 21px 0px 0px 0px;
     background: var(--primary);
+    background-color: rgb(178, 178, 227);
   }
   
   .container a {

@@ -16,7 +16,7 @@ const NewListing = (props) => {
   }
   const handleSubmit = (e) => {
     e.preventDefault()
-    // Update this line shortly...
+    props.handleAddListing(form)
   }
 
   return (
