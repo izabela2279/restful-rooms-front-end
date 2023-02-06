@@ -11,7 +11,9 @@ const NewListing = (props) => {
     beds: 0,
     baths: 0,
   })
-
+  const handleChange = ({ target }) => {
+    setForm({ ...form, [target.name]: target.value })
+  }
  return (
     <>
     </>
