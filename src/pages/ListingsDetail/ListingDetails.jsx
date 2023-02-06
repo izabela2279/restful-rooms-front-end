@@ -22,8 +22,10 @@ const ListingDetails = (props) => {
         fetchListing()
     }, [id])
 
-
-
+    const handleAddReview = async (reviewData) => {
+        const newReview = await listingService.createReview(id, reviewData)
+        setListing({ ...listing, reviews: [...listing.reviews, newReview] })
+    }
 
     return (
         <>
