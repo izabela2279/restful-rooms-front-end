@@ -1,14 +1,10 @@
 import { useState, useEffect } from "react"
 import { useParams } from "react-router-dom"
-
+import NewReview from "../../components/NewReview/NewReview";
 import styles from './ListingDetails.module.css'
-
-
 
 //Services
 import * as listingService from "../../services/listingService";
-
-
 
 
 const ListingDetails = (props) => {
@@ -37,10 +33,10 @@ const ListingDetails = (props) => {
                 <p>{listing.description}</p>
             </main>
 
-            {/* <section>
+            <section>
                 <h1>Review</h1>
                 <NewReview handleAddReview={handleAddReview} />
-            </section>  */}
+            </section>
 
         </>
     )
