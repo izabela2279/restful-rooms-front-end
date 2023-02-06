@@ -51,6 +51,12 @@ const App = () => {
     navigate('/listings')
   }
 
+  const handleDeleteListing = async (id) => {
+    const deletedListing = await listingService.deleteListing(id)
+    setListings(listings.filter(b => b._id !== deletedListing._id))
+    navigate('/listings')
+  }
+
   useEffect(() => {
     const fetchAllListings = async () => {
       const data = await listingService.index()
