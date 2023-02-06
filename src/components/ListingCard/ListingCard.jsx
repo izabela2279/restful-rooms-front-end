@@ -16,8 +16,18 @@ const ListingCard = ({ listing }) => {
           </span>
           {/* <AuthorInfo content={listing} /> */}
         </header>
-       
-        
+        <div className="form-group mb-4">
+					<label htmlFor="photo-upload" className="form-label">
+						Upload Photo
+					</label>
+					<input
+						type="file"
+						className="form-control"
+						id="photo-upload"
+						name="photo"
+						onChange={handleChangePhoto}
+					/>
+				</div> 
       </article>
     </Link>
   )
