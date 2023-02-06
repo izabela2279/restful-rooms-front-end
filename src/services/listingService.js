@@ -69,10 +69,27 @@ const addPhoto = async (photoData, listingId) => {
   }
 }
 
+const createReview = async (id, reviewData) => {
+  try {
+    const res = await fetch(`${BASE_URL}/${id}/reviews`, {
+      method: 'POST',
+      headers: {
+        'Authorization': `Bearer ${tokenService.getToken()}`,
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(reviewData)
+    })
+    return res.json()
+  } catch (error) {
+    console.log(error)
+  }
+}
+
 export {
   index,
   show,
   create,
   update,
   addPhoto,
+  createReview,
 }

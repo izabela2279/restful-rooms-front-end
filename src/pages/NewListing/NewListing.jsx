@@ -11,7 +11,7 @@ const NewListing = (props) => {
     beds: 1,
     baths: 1,
     guests: 1
-    
+
   })
   const handleChange = ({ target }) => {
     setForm({ ...form, [target.name]: target.value })
@@ -66,7 +66,7 @@ const NewListing = (props) => {
           onChange={handleChange}
         />
         <label htmlFor="text-input">Description</label>
-				<textarea
+        <textarea
           required
           type="text"
           name="description"
@@ -92,7 +92,7 @@ const NewListing = (props) => {
           <option value="7">7</option>
           <option value="8">8</option>
         </select>
-        
+
         <label htmlFor="category-input">Beds</label>
         <select
           required
@@ -110,7 +110,7 @@ const NewListing = (props) => {
           <option value="7">7</option>
           <option value="8">8</option>
         </select>
-        
+
         <label htmlFor="category-input">Baths</label>
         <select
           required
@@ -128,7 +128,7 @@ const NewListing = (props) => {
           <option value="7">7</option>
           <option value="8">8</option>
         </select>
-        
+
         <label htmlFor="category-input">Guests</label>
         <select
           required
@@ -146,18 +146,6 @@ const NewListing = (props) => {
           <option value="7">7</option>
           <option value="8">8</option>
         </select>
-        <div className="form-group mb-4">
-					<label htmlFor="photo-upload" className="form-label">
-						Upload Photo
-					</label>
-					<input
-						type="file"
-						className="form-control"
-						id="photo-upload"
-						name="photo"
-						onChange={handleChangePhoto}
-					/>
-				</div>
         <button type="submit">SUBMIT</button>
       </form>
     </main>
