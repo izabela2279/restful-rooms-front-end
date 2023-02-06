@@ -125,7 +125,17 @@ const App = () => {
           path="/listings/:id/edit"
           element={
             <ProtectedRoute user={user}>
-              <EditListing  handleUpdateListing={handleUpdateListing} />
+              <EditListing handleUpdateListing={handleUpdateListing} />
+            </ProtectedRoute>
+          }
+        />
+
+
+        <Route
+          path="/listings/:id"
+          element={
+            <ProtectedRoute user={user}>
+              <ListingDetails user={user} handleDeleteListing={handleDeleteListing} />
             </ProtectedRoute>
           }
         />
