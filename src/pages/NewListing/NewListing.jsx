@@ -146,6 +146,18 @@ const NewListing = (props) => {
           <option value="7">7</option>
           <option value="8">8</option>
         </select>
+        <div className="form-group mb-4">
+					<label htmlFor="photo-upload" className="form-label">
+						Upload Photo
+					</label>
+					<input
+						type="file"
+						className="form-control"
+						id="photo-upload"
+						name="photo"
+						onChange={handleChangePhoto}
+					/>
+				</div>
         <button type="submit">SUBMIT</button>
       </form>
     </main>
