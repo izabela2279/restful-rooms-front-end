@@ -24,7 +24,7 @@ const ListingDetails = (props) => {
 
                 <h1>{listing.title}</h1>
                 {listing.photo}
-                <p>{listing.bedrooms} {listing.beds} {listing.baths}</p>
+                <p>{listing.bedrooms} {listing.beds} {listing.baths}{listing.guests}</p>
                 <p>{listing.description}</p>
 
 
