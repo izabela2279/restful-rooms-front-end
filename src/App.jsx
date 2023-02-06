@@ -44,6 +44,12 @@ const App = () => {
     navigate('/listings')
   }
 
+  const handleUpdateListing = async (listingData) => {
+    const updatedListing = await listingService.update(listingData)
+    setListings(listings.map((b) => listingData._id === b._id ? updatedListing : b))
+    navigate('/listings')
+  }
+
   useEffect(() => {
     const fetchAllListings = async () => {
       const data = await listingService.index()
