@@ -1,15 +1,16 @@
 import { useState, useEffect } from "react"
 import { useParams } from "react-router-dom"
-import styles from './BlogDetails.module.css'
+import styles from './ListingDetails.module.css';
+
 
 //Services
-import * as listingService from "../../services/listingService"
+import * as listingService from "../../services/listingService";
 
 
 
 const ListingDetails = (props) => {
     const { id } = useParams()
-    const [listing, setListing]=useState(null)
+    const [listing, setListing]= useState([])
     useEffect(() => {
         const fetchListing = async () => {
           const data = await listingService.show(id)
@@ -18,10 +19,15 @@ const ListingDetails = (props) => {
         fetchListing()
       }, [id])
     return (
-        <main>
-            Details
-        </main>
-    )
+            <main >
+    
+                  <h1>{listing.title}</h1>
+                  <p>{listing.beds}</p>
+                 
+                 
+                
+            </main>
+          )
 }
 
 export default ListingDetails
