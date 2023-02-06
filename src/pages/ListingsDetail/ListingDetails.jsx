@@ -21,6 +21,10 @@ const ListingDetails = (props) => {
         }
         fetchListing()
     }, [id])
+
+
+
+
     return (
         <>
             <main >
@@ -30,7 +34,6 @@ const ListingDetails = (props) => {
                 <p>{listing.bedrooms} {listing.beds} {listing.baths}{listing.guests}</p>
                 <p>{listing.description}</p>
             </main>
-           
 
         </>
     )

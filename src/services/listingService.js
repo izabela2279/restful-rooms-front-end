@@ -57,6 +57,8 @@ const update = async (listingData) => {
   }
 }
 
+
+
 export {
   index,
   show,

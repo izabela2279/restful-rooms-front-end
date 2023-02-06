@@ -21,17 +21,6 @@ const NewListing = (props) => {
     props.handleAddListing(form)
   }
 
-  const [photoData, setPhotoData] = useState({
-
-  })
-  const handleChangePhoto = evt => {
-    setPhotoData({ photo: evt.target.files[0] })
-  }
-  const handlePhotoSubmit = evt => {
-    evt.preventDefault()
-    props.handleAddPhoto(formData, photoData.photo)
-  }
-
   return (
     <main className={styles.container}>
       <form onSubmit={handleSubmit}>
@@ -65,7 +54,7 @@ const NewListing = (props) => {
           placeholder="Price"
           onChange={handleChange}
         />
-        <label htmlFor="text-input">Description</label>
+         <label htmlFor="text-input">Description</label>
 				<textarea
           required
           type="text"
@@ -146,18 +135,6 @@ const NewListing = (props) => {
           <option value="7">7</option>
           <option value="8">8</option>
         </select>
-        <div className="form-group mb-4">
-					<label htmlFor="photo-upload" className="form-label">
-						Upload Photo
-					</label>
-					<input
-						type="file"
-						className="form-control"
-						id="photo-upload"
-						name="photo"
-						onChange={handleChangePhoto}
-					/>
-				</div>
         <button type="submit">SUBMIT</button>
       </form>
     </main>
