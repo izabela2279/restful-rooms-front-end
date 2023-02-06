@@ -29,7 +29,7 @@ const NewListing = (props) => {
   }
   const handlePhotoSubmit = evt => {
     evt.preventDefault()
-    props.handleAddPhoto(formData, photoData.photo)
+    // props.handleAddPhoto(formData, photoData.photo)
   }
 
   return (
