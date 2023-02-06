@@ -57,9 +57,22 @@ const update = async (listingData) => {
   }
 }
 
+const addPhoto = async (photoData, listingId) => {
+  try {
+    const res = await fetch(`${BASE_URL}/${listingId}/add-photo`, {
+      method: 'PUT',
+      body: photoData
+    })
+    return res.json()
+  } catch (error) {
+    console.log(error)
+  }
+}
+
 export {
   index,
   show,
   create,
   update,
+  addPhoto,
 }
