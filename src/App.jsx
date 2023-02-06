@@ -11,6 +11,7 @@ import ChangePassword from './pages/ChangePassword/ChangePassword'
 import AllListings from './pages/AllListings/AllListings'
 import ListingDetails from './pages/ListingsDetail/ListingDetails'
 import NewListing from './pages/NewListing/NewListing'
+import EditListing from './pages/EditListing/EditListing'
 
 // components
 import NavBar from './components/NavBar/NavBar'
@@ -109,6 +110,16 @@ const App = () => {
           element={
             <ProtectedRoute user={user}>
               <NewListing handleAddListing={handleAddListing} />
+            </ProtectedRoute>
+          }
+        />
+
+
+        <Route
+          path="/listings/:id/edit"
+          element={
+            <ProtectedRoute user={user}>
+              <EditListing  handleUpdateListing={handleUpdateListing} />
             </ProtectedRoute>
           }
         />
