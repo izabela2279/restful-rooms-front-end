@@ -2,7 +2,6 @@ import { useState } from "react"
 import styles from './NewReview.module.css'
 
 // Components
-import Icon from "../Icon/Icon"
 
 const NewReview = (props) => {
   const [form, setForm] = useState({ text: '' })
@@ -13,7 +12,7 @@ const NewReview = (props) => {
 
   const handleSubmit = (e) => {
     e.preventDefault()
-    // Update this line shortly....
+   props.handleAddReview(form)
     setForm({ text: '' })
   }
 
@@ -28,7 +27,7 @@ const NewReview = (props) => {
         placeholder="Add a Review"
         onChange={handleChange}
       />
-      <button type="submit"><Icon category="Create" /></button>
+      <button type="submit">Create</button>
     </form>
   )
 }
