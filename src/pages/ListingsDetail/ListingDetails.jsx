@@ -10,24 +10,27 @@ import * as listingService from "../../services/listingService";
 
 const ListingDetails = (props) => {
     const { id } = useParams()
-    const [listing, setListing]= useState([])
+    const [listing, setListing] = useState([])
     useEffect(() => {
         const fetchListing = async () => {
-          const data = await listingService.show(id)
-          setListing(data)
+            const data = await listingService.show(id)
+            setListing(data)
         }
         fetchListing()
-      }, [id])
+    }, [id])
     return (
+        <>
             <main >
-    
-                  <h1>{listing.title}</h1>
-                  <p>{listing.beds}</p>
-                 
-                 
-                
+
+                <h1>{listing.title}</h1>
+                {listing.photo}
+                <p>{listing.bedrooms} {listing.beds} {listing.baths}</p>
+                <p>{listing.description}</p>
+
+
             </main>
-          )
+        </>
+    )
 }
 
 export default ListingDetails
