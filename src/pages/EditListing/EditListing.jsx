@@ -13,7 +13,7 @@ const EditListing = (props) => {
 
   const handleSubmit = (e) => {
     e.preventDefault()
-    // Update this line shortly...
+    props.handleUpdateListing(form)
   }  
 
   return (
