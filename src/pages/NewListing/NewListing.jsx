@@ -1,5 +1,5 @@
 import { useState } from "react"
-import styles from './NewLising.module.css'
+import styles from './NewListing.module.css'
 
 const NewListing = (props) => {
   const [form, setForm] = useState({
