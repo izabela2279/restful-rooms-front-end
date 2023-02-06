@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react"
-import { useParams } from "react-router-dom"
+import { useParams,Link } from "react-router-dom"
 import styles from './ListingDetails.module.css';
 
 
@@ -26,7 +26,6 @@ const ListingDetails = (props) => {
                 {listing.photo}
                 <p>{listing.bedrooms} {listing.beds} {listing.baths}{listing.guests}</p>
                 <p>{listing.description}</p>
-
 
             </main>
         </>
