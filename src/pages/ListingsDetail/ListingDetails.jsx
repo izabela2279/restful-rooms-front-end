@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react"
 import { useParams } from "react-router-dom"
-import styles from './ListingDetails.module.css';
+import styles from './ListingDetails.module.css'
+
 
 
 //Services
