@@ -84,6 +84,22 @@ const createReview = async (id, reviewData) => {
   }
 }
 
+const createActivity = async (id, activityData) => {
+  try {
+    const res = await fetch(`${BASE_URL}/${id}/activities`, {
+      method: 'POST',
+      headers: {
+        'Authorization': `Bearer ${tokenService.getToken()}`,
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(activityData)
+    })
+    return res.json()
+  } catch (error) {
+    console.log(error)
+  }
+}
+
 export {
   index,
   show,
@@ -91,4 +107,5 @@ export {
   update,
   addPhoto,
   createReview,
+  createActivity,
 }
