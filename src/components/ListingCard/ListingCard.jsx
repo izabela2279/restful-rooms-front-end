@@ -15,9 +15,7 @@ const ListingCard = ({ listing }) => {
             <h2>{listing.photo}</h2>
           </span>
           {/* <AuthorInfo content={listing} /> */}
-        </header>
-       
-        
+        </header> 
       </article>
     </Link>
   )

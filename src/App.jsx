@@ -39,10 +39,19 @@ const App = () => {
     setUser(authService.getUser())
   }
 
-  const handleAddListing = async (listingData) => {
+  const handleAddListing = async (listingData, photo) => {
     const newListing = await listingService.create(listingData)
+    if (photo) {
+      newListing.photo = await listingPhotoHelper(photo, newListing._id)
+    }
     setListings([newListing, ...listings])
     navigate('/listings')
+  }
+
+  const listingPhotoHelper = async (photo, id) => {
+    const photoData = new FormData()
+    photoData.append('photo', photo)
+    return await listingService.addPhoto(photoData, id)
   }
 
   const handleUpdateListing = async (listingData) => {
