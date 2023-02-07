@@ -17,14 +17,14 @@ const NewListing = (props) => {
   const handleChange = ({ target }) => {
     setForm({ ...form, [target.name]: target.value })
   }
+  const [photoData, setPhotoData] = useState({
+
+  })
+  
   const handleSubmit = (e) => {
     e.preventDefault()
     props.handleAddListing(form, photoData.photo)
   }
-
-  const [photoData, setPhotoData] = useState({
-
-  })
   const handleChangePhoto = evt => {
     setPhotoData({ photo: evt.target.files[0] })
   }
