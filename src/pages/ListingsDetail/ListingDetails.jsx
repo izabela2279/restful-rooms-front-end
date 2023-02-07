@@ -54,15 +54,17 @@ const ListingDetails = (props) => {
 
           </span>
                 
-
-
-            </main>
-
             <section>
                 <h1>Review</h1>
                 <NewReview handleAddReview={handleAddReview} />
             </section>
-
+            
+            </main>
+            <section>
+                <h1>Activities</h1>
+                <NewActivity handleAddActivity={handleAddActivity} />
+                <Activities activities={listing.activities} user={props.user} />
+            </section>
         </>
     )
 }
