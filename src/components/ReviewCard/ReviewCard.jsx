@@ -1,17 +1,14 @@
-import ReviewCard from "../ReviewCard/ReviewCard"
+import UserInfo from "../UserInfo/UserInfo"
 
-const Reviews = (props) => {
-  if (!props.reviews) return <h4>No Reviews</h4>
-
+const ReviewCard = ({ review }) => {
   return (
-    <>
-      {props.reviews.map((review) => (
-        <ReviewCard
-          key={review._id}
-          review={review}
-          user={props.user}
-        />
-      ))}
-    </>
+    <article>
+      <header>
+        <UserInfo content={review} />
+      </header>
+      <p>{review.text}</p>
+    </article>
   )
 }
+
+export default ReviewCard
