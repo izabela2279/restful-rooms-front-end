@@ -4,7 +4,7 @@ import NewReview from "../../components/NewReview/NewReview";
 import NewActivity from "../../components/NewActivity/NewActivity";
 import Activities from "../../components/Activities/Activities";
 import Reviews from "../../components/Reviews/Reviews";
-import styles from './ListingDetails.module.css'
+// import styles from './ListingDetails.module.css'
 
 //Services
 import * as listingService from "../../services/listingService";
