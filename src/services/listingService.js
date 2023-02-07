@@ -60,6 +60,9 @@ const addPhoto = async (photoData, listingId) => {
   try {
     const res = await fetch(`${BASE_URL}/${listingId}/add-photo`, {
       method: 'PUT',
+      headers: {
+        'Authorization': `Bearer ${tokenService.getToken()}`
+      },
       body: photoData
     })
     return res.json()
@@ -113,7 +116,6 @@ const deleteListing = async (id) => {
     console.log(error)
   }
 }
-
 
 const createReservation = async (id, reservationData) => {
   try {
