@@ -1,11 +1,12 @@
 import { useState, useEffect } from "react"
 import { useParams, Link } from "react-router-dom"
 import NewReview from "../../components/NewReview/NewReview";
+import NewActivity from "../../components/NewActivity/NewActivity";
+import Activities from "../../components/Activities/Activities";
 import styles from './ListingDetails.module.css'
 
 //Services
 import * as listingService from "../../services/listingService";
-
 
 const ListingDetails = (props) => {
     console.log(props)
@@ -22,6 +23,11 @@ const ListingDetails = (props) => {
     const handleAddReview = async (reviewData) => {
         const newReview = await listingService.createReview(id, reviewData)
         setListing({ ...listing, reviews: [...listing.reviews, newReview] })
+    }
+
+    const handleAddActivity = async (activityData) => {
+        const newActivity = await listingService.createActivity(id, activityData)
+        setListing({ ...listing, activities: [...listing.activities, newActivity] })
     }
 
     console.log('Listing data', listing)
@@ -49,11 +55,13 @@ const ListingDetails = (props) => {
           </span>
                 
 
-          <section>
+
+            </main>
+
+            <section>
                 <h1>Review</h1>
                 <NewReview handleAddReview={handleAddReview} />
             </section>
-            </main>
 
         </>
     )
