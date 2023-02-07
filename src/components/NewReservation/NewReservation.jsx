@@ -2,6 +2,7 @@ import { useState } from "react"
 import styles from './NewReservation.module.css'
 
 const NewReservation = (props) => {
+    
     const [form, setForm] = useState({ text: '' })
 
     const handleChange = ({ target }) => {

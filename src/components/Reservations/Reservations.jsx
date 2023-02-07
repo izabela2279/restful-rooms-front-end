@@ -6,7 +6,7 @@ const Reservations = (props) => {
         {props.reservations.map((reservations) => (
             <ReservationCard
             key= {reservations._id}
-            reservation={reservation}
+            reservation={reservations}
             user={props.user}
             />
         ))}
