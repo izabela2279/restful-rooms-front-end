@@ -48,4 +48,4 @@ const NewReservation = (props) => {
     )
 }
 
-export default NewActivity
+export default NewReservation
