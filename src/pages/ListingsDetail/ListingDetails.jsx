@@ -35,7 +35,7 @@ const ListingDetails = (props) => {
 
     const handleAddReservation = async (reservationData) => {
         const newReservation = await listingService.createReservation(id, reservationData)
-        setListing({...listing, reservations: [...listing.reservations, newReservation] })
+        setListing({...listing, reservations: [...(listing.reservations|| []), newReservation] })
     }
 
 
@@ -49,9 +49,10 @@ const ListingDetails = (props) => {
                 <h1>{listing.title}</h1>
                 {listing.photo}
                 <p>{listing.bedrooms} {listing.beds} {listing.baths}{listing.guests}</p>
+                <p>{listing.amenities}</p>
                 <p>{listing.description}</p>
 
-                <span>
+            <span>
             {/* <AuthorInfo content={listing} /> */}
 
             {listing.author._id === props.user.profile &&
@@ -60,8 +61,7 @@ const ListingDetails = (props) => {
                 <button onClick={() => props.handleDeleteListing(id)}>Delete</button>
               </>
             }
-
-          </span>
+            </span>
                 
             <section>
                 <h1>Review</h1>
@@ -80,9 +80,7 @@ const ListingDetails = (props) => {
                 <h1>Activities</h1>
                 <NewActivity handleAddActivity={handleAddActivity} />
                 <Activities activities={listing.activities} user={props.user} />
-            </section>
-
-           
+            </section>  
         </>
     )
 }
