@@ -1,11 +1,8 @@
-const ReservationCard = ({ reservation }) => {
+const ReservationCard = ({ reservations }) => {
   return (
     <article>
-      <header>
-       
-      </header>
-      <p>{reservation.date}</p>
-      <p>{reservation.guests}</p>
+      <p>{reservations.date}</p>
+      <p>{reservations.guests}</p>
     </article>
   )
 }

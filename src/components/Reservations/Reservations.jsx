@@ -3,10 +3,10 @@ import ReservationCard from "../ReservationCard/ReservationCard";
 const Reservations = (props) => {
     return(
         <>
-        {props.reservations.map((reservations) => (
+        {props.reservations && props.reservations.map((reservations) => (
             <ReservationCard
             key= {reservations._id}
-            reservation={reservation}
+            reservations={reservations}
             user={props.user}
             />
         ))}

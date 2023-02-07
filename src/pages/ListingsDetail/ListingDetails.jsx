@@ -35,7 +35,7 @@ const ListingDetails = (props) => {
 
     const handleAddReservation = async (reservationData) => {
         const newReservation = await listingService.createReservation(id, reservationData)
-        setListing({ ...listing, reservations: [...listing.reservations, newReservation] })
+        setListing({ ...listing, reservations: [...(listing.reservations || []), newReservation] })
     }
 
 
@@ -79,7 +79,7 @@ const ListingDetails = (props) => {
             <section>
                 <h1>Reservations</h1>
                 <NewReservation handleAddReservation={handleAddReservation} />
-                {/* <Reservations activities={listing.activities} user={props.user} /> */}
+                <Reservations reservations={listing.reservations} user={props.user} />
             </section>
         </>
     )
