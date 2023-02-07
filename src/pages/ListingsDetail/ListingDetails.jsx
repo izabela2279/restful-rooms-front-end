@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react"
 import { useParams, Link } from "react-router-dom"
 import NewReview from "../../components/NewReview/NewReview";
+import NewActivity from "../../components/NewActivity/NewActivity";
 import styles from './ListingDetails.module.css'
 
 //Services
@@ -57,6 +58,10 @@ const ListingDetails = (props) => {
             <section>
                 <h1>Review</h1>
                 <NewReview handleAddReview={handleAddReview} />
+            </section>
+            <section>
+                <h1>Activities</h1>
+                <NewActivity handleAddActivity={handleAddActivity} />
             </section>
         </>
     )
