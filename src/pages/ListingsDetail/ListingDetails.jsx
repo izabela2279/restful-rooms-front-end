@@ -4,7 +4,13 @@ import NewReview from "../../components/NewReview/NewReview";
 import NewActivity from "../../components/NewActivity/NewActivity";
 import Activities from "../../components/Activities/Activities";
 import Reviews from "../../components/Reviews/Reviews";
+<<<<<<< HEAD
 // import styles from './ListingDetails.module.css'
+=======
+import NewReservation from "../../components/NewReservation/NewReservation";
+import Reservations from "../../components/Reservations/Reservations";
+import styles from './ListingDetails.module.css'
+>>>>>>> 9f0ecb3301e1e2ee0b64253f4705e81a2000f755
 
 //Services
 import * as listingService from "../../services/listingService";
@@ -30,6 +36,12 @@ const ListingDetails = (props) => {
         const newActivity = await listingService.createActivity(id, activityData)
         setListing({ ...listing, activities: [...listing.activities, newActivity] })
     }
+
+    const handleAddReservation = async (reservationData) => {
+        const newReservation = await listingService.createReservation(id, reservationData)
+        setListing({ ...listing, reservations: [...listing.reservations, newReservation] })
+    }
+
 
     console.log('Listing data', listing)
     if (!listing) return <h1>Loading</h1>
@@ -66,6 +78,12 @@ const ListingDetails = (props) => {
                 <h1>Activities</h1>
                 <NewActivity handleAddActivity={handleAddActivity} />
                 <Activities activities={listing.activities} user={props.user} />
+            </section>
+
+            <section>
+                <h1>Reservations</h1>
+                <NewReservation handleAddReservation={handleAddReservation} />
+                {/* <Reservations activities={listing.activities} user={props.user} /> */}
             </section>
         </>
     )
