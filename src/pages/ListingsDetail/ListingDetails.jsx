@@ -74,6 +74,12 @@ const ListingDetails = (props) => {
                 <NewActivity handleAddActivity={handleAddActivity} />
                 <Activities activities={listing.activities} user={props.user} />
             </section>
+
+            <section>
+                <h1>Reservations</h1>
+                <NewReservation handleAddReservation={handleAddReservation} />
+                {/* <Reservations activities={listing.activities} user={props.user} /> */}
+            </section>
         </>
     )
 }

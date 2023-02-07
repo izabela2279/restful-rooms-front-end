@@ -11,7 +11,7 @@ const NewReservation = (props) => {
     const handleSubmit = (e) => {
         e.preventDefault()
         props.handleAddReservation(form)
-        setForm({ text: '' })
+        setForm(null)
     }
 
     return (
@@ -43,7 +43,7 @@ const NewReservation = (props) => {
                 <option value="7">7</option>
                 <option value="8">8</option>
             </select>
-            <button type="submit">Create</button>
+            <button type="submit">RESERVE</button>
         </form>
     )
 }
