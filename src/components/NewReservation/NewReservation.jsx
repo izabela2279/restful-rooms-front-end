@@ -16,7 +16,17 @@ const NewReservation = (props) => {
 
     return (
         <form className={styles.container} onSubmit={handleSubmit}>
-            <label htmlFor="text-input">Date</label>
+            <label htmlFor="text-input">Check-In Date</label>
+            <input
+                required
+                type="date"
+                name="date"
+                id="price-input"
+                value={form.date}
+                placeholder="Date"
+                onChange={handleChange}
+            />
+            <label htmlFor="text-input">Check-Out Date</label>
             <input
                 required
                 type="date"
