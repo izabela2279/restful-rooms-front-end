@@ -40,7 +40,6 @@ const create = async (listingData) => {
   }
 }
 
-
 const update = async (listingData) => {
   try {
     const res = await fetch(`${BASE_URL}/${listingData._id}`, {
@@ -85,6 +84,21 @@ const createReview = async (id, reviewData) => {
   }
 }
 
+const deleteListing = async (id) => {
+  try {
+    const res = await fetch(`${BASE_URL}/${id}`, {
+      method: 'DELETE',
+      headers: {
+        'Authorization': `Bearer ${tokenService.getToken()}`
+      }
+    })
+    return res.json()
+  } catch (error) {
+    console.log(error)
+  }
+}
+
+
 export {
   index,
   show,
@@ -92,4 +106,5 @@ export {
   update,
   addPhoto,
   createReview,
+  deleteListing,
 }

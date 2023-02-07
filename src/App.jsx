@@ -11,6 +11,7 @@ import ChangePassword from './pages/ChangePassword/ChangePassword'
 import AllListings from './pages/AllListings/AllListings'
 import ListingDetails from './pages/ListingsDetail/ListingDetails'
 import NewListing from './pages/NewListing/NewListing'
+import EditListing from './pages/EditListing/EditListing'
 
 // components
 import NavBar from './components/NavBar/NavBar'
@@ -49,6 +50,14 @@ const App = () => {
     setListings(listings.map((b) => listingData._id === b._id ? updatedListing : b))
     navigate('/listings')
   }
+
+  const handleDeleteListing = async (id) => {
+    console.log('HANDLE DELETE LISTING IS WORKING')
+    const deletedListing = await listingService.deleteListing(id)
+    setListings(listings.filter(b => b._id !== deletedListing._id))
+    navigate('/listings')
+  }
+  console.log(handleDeleteListing)
 
   useEffect(() => {
     const fetchAllListings = async () => {
@@ -95,14 +104,6 @@ const App = () => {
             </ProtectedRoute>
           }
         />
-        <Route
-          path="/listings/:id"
-          element={
-            <ProtectedRoute user={user}>
-              <ListingDetails user={user} />
-            </ProtectedRoute>
-          }
-        />
 
         <Route
           path="/listings/new"
@@ -112,6 +113,28 @@ const App = () => {
             </ProtectedRoute>
           }
         />
+         <Route
+          path="/listings/:id"
+          element={
+            <ProtectedRoute user={user}>
+              <ListingDetails user={user} handleDeleteListing={handleDeleteListing} />
+            </ProtectedRoute>
+          }
+        />
+
+
+        <Route
+          path="/listings/:id/edit"
+          element={
+            <ProtectedRoute user={user}>
+              <EditListing handleUpdateListing={handleUpdateListing} />
+            </ProtectedRoute>
+          }
+        />
+
+
+       
+        
 
       </Routes>
     </>
