@@ -1,10 +1,10 @@
-// import AuthorInfo from "../AuthorInfo/AuthorInfo"
+import UserInfo from "../UserInfo/UserInfo"
 
 const ActivityCard = ({ activity }) => {
   return (
     <article>
       <header>
-        <AuthorInfo content={activity} />
+        <UserInfo content={activity} />
       </header>
       <p>{activity.text}</p>
     </article>
