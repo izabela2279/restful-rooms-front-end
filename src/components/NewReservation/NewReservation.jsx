@@ -20,8 +20,8 @@ const NewReservation = (props) => {
             <input
                 required
                 type="date"
-                name="date"
-                id="price-input"
+                name="dateCheckIn"
+                id="dateCheckIn-input"
                 value={form.date}
                 placeholder="Date"
                 onChange={handleChange}
@@ -30,8 +30,8 @@ const NewReservation = (props) => {
             <input
                 required
                 type="date"
-                name="date"
-                id="price-input"
+                name="dateCheckOut"
+                id="checkOut-input"
                 value={form.date}
                 placeholder="Date"
                 onChange={handleChange}
