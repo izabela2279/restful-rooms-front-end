@@ -3,7 +3,7 @@ import styles from './NewReservation.module.css'
 
 const NewReservation = (props) => {
     
-    const [form, setForm] = useState({ text: '' })
+    const [form, setForm] = useState({ dateCheckIn: '', dateCheckOut: '',guests: 1})
 
     const handleChange = ({ target }) => {
         setForm({ ...form, [target.name]: target.value })
@@ -12,7 +12,7 @@ const NewReservation = (props) => {
     const handleSubmit = (e) => {
         e.preventDefault()
         props.handleAddReservation(form)
-        setForm(null)
+        setForm({ dateCheckIn: '', dateCheckOut: '',guests: 1} )
     }
 
     return (
@@ -23,7 +23,7 @@ const NewReservation = (props) => {
                 type="date"
                 name="dateCheckIn"
                 id="dateCheckIn-input"
-                value={form.date}
+                value={form.dateCheckIn}
                 placeholder="Date"
                 onChange={handleChange}
             />
@@ -33,7 +33,7 @@ const NewReservation = (props) => {
                 type="date"
                 name="dateCheckOut"
                 id="checkOut-input"
-                value={form.date}
+                value={form.dateCheckOut}
                 placeholder="Date"
                 onChange={handleChange}
             />
