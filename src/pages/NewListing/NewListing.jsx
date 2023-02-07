@@ -6,6 +6,7 @@ const NewListing = (props) => {
     title: '',
     location: '',
     price: '',
+    photo: '',
     description: '',
     bedrooms: 1,
     beds: 1,
@@ -18,7 +19,7 @@ const NewListing = (props) => {
   }
   const handleSubmit = (e) => {
     e.preventDefault()
-    props.handleAddListing(form)
+    props.handleAddListing(form, photoData.photo)
   }
 
   const [photoData, setPhotoData] = useState({
@@ -26,10 +27,6 @@ const NewListing = (props) => {
   })
   const handleChangePhoto = evt => {
     setPhotoData({ photo: evt.target.files[0] })
-  }
-  const handlePhotoSubmit = evt => {
-    evt.preventDefault()
-    // props.handleAddPhoto(formData, photoData.photo)
   }
 
   return (
