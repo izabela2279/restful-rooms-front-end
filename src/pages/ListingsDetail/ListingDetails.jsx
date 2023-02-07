@@ -49,13 +49,11 @@ const ListingDetails = (props) => {
           </span>
                 
 
-
-            </main>
-
-            <section>
+          <section>
                 <h1>Review</h1>
                 <NewReview handleAddReview={handleAddReview} />
             </section>
+            </main>
 
         </>
     )
