@@ -11,8 +11,8 @@ const NewListing = (props) => {
     bedrooms: 1,
     beds: 1,
     baths: 1,
-    guests: 1
-
+    guests: 1,
+    amenities: 'FEZIBO Height Adjustable Electric Standing desk with Double Drawer, 48 x 24 Inch Table with Storage Shelf, Sit Stand Desk with Splice Board'
   })
   const handleChange = ({ target }) => {
     setForm({ ...form, [target.name]: target.value })
@@ -20,7 +20,7 @@ const NewListing = (props) => {
   const [photoData, setPhotoData] = useState({
 
   })
-  
+
   const handleSubmit = (e) => {
     e.preventDefault()
     props.handleAddListing(form, photoData.photo)
