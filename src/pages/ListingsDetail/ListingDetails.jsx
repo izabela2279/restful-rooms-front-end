@@ -9,6 +9,7 @@ import styles from './ListingDetails.module.css'
 import * as listingService from "../../services/listingService";
 
 const ListingDetails = (props) => {
+    console.log(props)
     const { id } = useParams()
     const [listing, setListing] = useState(null)
     useEffect(() => {
@@ -31,6 +32,7 @@ const ListingDetails = (props) => {
 
     console.log('Listing data', listing)
     if (!listing) return <h1>Loading</h1>
+    
     return (
         <>
             <main >
@@ -46,7 +48,7 @@ const ListingDetails = (props) => {
             {listing.author._id === props.user.profile &&
               <>
                 <Link to={`/listings/${id}/edit`} state={listing}>Edit</Link>
-                <button>Delete</button>
+                <button onClick={() => props.handleDeleteListing(id)}>Delete</button>
               </>
             }
 
