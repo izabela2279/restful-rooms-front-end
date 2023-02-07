@@ -3,6 +3,7 @@ import { useParams, Link } from "react-router-dom"
 import NewReview from "../../components/NewReview/NewReview";
 import NewActivity from "../../components/NewActivity/NewActivity";
 import Activities from "../../components/Activities/Activities";
+import Reviews from "../../components/Reviews/Reviews";
 import styles from './ListingDetails.module.css'
 
 //Services
@@ -57,6 +58,7 @@ const ListingDetails = (props) => {
             <section>
                 <h1>Review</h1>
                 <NewReview handleAddReview={handleAddReview} />
+                <Reviews reviews={listing.reviews} user={props.user} />
             </section>
             
             </main>
