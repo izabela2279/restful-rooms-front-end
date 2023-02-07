@@ -5,6 +5,7 @@ import NewActivity from "../../components/NewActivity/NewActivity";
 import Activities from "../../components/Activities/Activities";
 import Reviews from "../../components/Reviews/Reviews";
 import NewReservation from "../../components/NewReservation/NewReservation";
+import Reservations from "../../components/Reservations/Reservations";
 import styles from './ListingDetails.module.css'
 
 //Services
