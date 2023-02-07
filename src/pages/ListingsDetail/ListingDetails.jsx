@@ -31,6 +31,12 @@ const ListingDetails = (props) => {
         setListing({ ...listing, activities: [...listing.activities, newActivity] })
     }
 
+    const handleAddReservation = async (reservationData) => {
+        const newReservation = await listingService.createReservation(id, reservationData)
+        setListing({ ...listing, reservations: [...listing.reservations, newReservation] })
+    }
+
+
     console.log('Listing data', listing)
     if (!listing) return <h1>Loading</h1>
     
