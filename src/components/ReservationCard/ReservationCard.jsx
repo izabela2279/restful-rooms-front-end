@@ -4,7 +4,8 @@ const ReservationCard = ({ reservation }) => {
       <header>
        
       </header>
-      <p>{reservation.date}</p>
+      <p>{reservation.dateCheckIn}</p>
+      <p>{reservation.dateCheckOut}</p>
       <p>{reservation.guests}</p>
     </article>
   )
