@@ -44,12 +44,15 @@ const ListingDetails = (props) => {
     
     return (
         <>
-            <main >
+            <main className ={styles.container} >
                 <h1>{listing.title}</h1>
                 <img alt="" src={listing.photo} />
-                <p>{listing.bedrooms} {listing.beds} {listing.baths}{listing.guests}</p>
-                <p>{listing.amenities}</p>
+                <p>{listing.guests} guests . {listing.bedrooms} bedrooms . {listing.beds} beds . {listing.baths} baths</p>
+                <div id='description'>
                 <p>{listing.description}</p>
+                </div>
+
+                <p>{listing.amenities}</p>
 
             <span>
             {/* <AuthorInfo content={listing} /> */}
