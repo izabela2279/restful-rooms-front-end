@@ -1,8 +1,10 @@
+import styles from './ReservationCard.module.css'
+
 const ReservationCard = ({ reservation }) => {
   return (
 
     
-    <article>
+    <article className={styles.container}>
       <header>
        
       </header>
