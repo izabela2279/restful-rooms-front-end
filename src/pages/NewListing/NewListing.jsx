@@ -24,7 +24,7 @@ const NewListing = (props) => {
     props.handleAddListing(form, photoData.photo)
   }
   const handleChangePhoto = evt => {
-    setPhotoData({ photo: [evt.target.files[0]] })
+    setPhotoData({ photo: evt.target.files[0] })
   }
 
   return (

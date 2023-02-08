@@ -46,7 +46,8 @@ const ListingDetails = (props) => {
         <>
             <main >
                 <h1>{listing.title}</h1>
-                <img alt="" src={listing.photo} />
+                <img alt="" src={listing.photo[0]} />
+                <img alt="" src={listing.photo[1]} />
                 <p>{listing.bedrooms} {listing.beds} {listing.baths}{listing.guests}</p>
                 <p>{listing.amenities}</p>
                 <p>{listing.description}</p>
