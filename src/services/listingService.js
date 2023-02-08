@@ -56,17 +56,16 @@ const update = async (listingData) => {
   }
 }
 
-const addPhoto = async (photoData, listingData) => {
+const addPhoto = async (photoData, listingId) => {
   try {
-    const res = await fetch(`${BASE_URL}/${listingData._id}/add-photo`, {
+    const res = await fetch(`${BASE_URL}/${listingId}/add-photo`, {
       method: 'PUT',
       headers: {
         'Authorization': `Bearer ${tokenService.getToken()}`,
-        'Content-Type': 'application/json'
       },
       body: photoData
     })
-    return res.json()
+    return await res.json()
   } catch (error) {
     console.log(error)
   }

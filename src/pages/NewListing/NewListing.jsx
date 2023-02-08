@@ -2,7 +2,7 @@ import { useState } from "react"
 import styles from './NewListing.module.css'
 
 const NewListing = (props) => {
-  const [form, setForm] = useState({
+  const [form, setForm,] = useState({
     title: '',
     location: '',
     price: '',
@@ -17,9 +17,7 @@ const NewListing = (props) => {
   const handleChange = ({ target }) => {
     setForm({ ...form, [target.name]: target.value })
   }
-  const [photoData, setPhotoData] = useState({
-
-  })
+  const [photoData, setPhotoData] = useState({})
 
   const handleSubmit = (e) => {
     e.preventDefault()

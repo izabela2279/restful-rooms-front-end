@@ -41,6 +41,7 @@ const App = () => {
 
   const handleAddListing = async (listingData, photo) => {
     const newListing = await listingService.create(listingData)
+    console.log(newListing);
     if (photo) {
       newListing.photo = await listingPhotoHelper(photo, newListing._id)
     }
