@@ -44,7 +44,7 @@ const App = () => {
     if (photo) {
       newListing.photo = await listingPhotoHelper(photo, newListing._id)
     }
-    setListings([newListing, ...listings])
+    setListings([...listings, newListing])
     navigate('/listings')
   }
 

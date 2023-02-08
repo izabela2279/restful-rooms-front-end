@@ -47,11 +47,12 @@ const ListingDetails = (props) => {
             <main >
 
                 <h1>{listing.title}</h1>
-                {listing.photo}
+                
                 <p>{listing.bedrooms} {listing.beds} {listing.baths}{listing.guests}</p>
+                <p>{listing.amenities}</p>
                 <p>{listing.description}</p>
 
-                <span>
+            <span>
             {/* <AuthorInfo content={listing} /> */}
 
             {listing.author._id === props.user.profile &&
@@ -60,13 +61,18 @@ const ListingDetails = (props) => {
                 <button onClick={() => props.handleDeleteListing(id)}>Delete</button>
               </>
             }
-
-          </span>
+            </span>
                 
             <section>
                 <h1>Review</h1>
                 <NewReview handleAddReview={handleAddReview} />
                 <Reviews reviews={listing.reviews} user={props.user} />
+            </section>
+
+            <section>
+                <h1>Reservations</h1>
+                <NewReservation handleAddReservation={handleAddReservation} />
+                <Reservations reservations={listing.reservations} user={props.user} />
             </section>
             
             </main>
