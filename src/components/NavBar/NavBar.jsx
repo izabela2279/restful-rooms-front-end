@@ -21,7 +21,7 @@ const NavBar = ({ user, handleLogout }) => {
 
   return (
     <nav className="container">
-        <NavLink to={'/'}><img src="assets/restful-logo_adobe_express (1).svg"  alt="restful-logo" style={{width: 80, height: 80}} /></NavLink>
+        <NavLink to={'/'}><img src="assets/Landing/restful-logo_adobe_express (1).svg"  alt="restful-logo" style={{width: 80, height: 80}} /></NavLink>
       {user ? protectedLinks : publicLinks}
     </nav>
   )
