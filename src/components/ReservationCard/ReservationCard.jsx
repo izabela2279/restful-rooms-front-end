@@ -1,5 +1,7 @@
 const ReservationCard = ({ reservation }) => {
   return (
+
+    
     <article>
       <header>
        
@@ -8,6 +10,7 @@ const ReservationCard = ({ reservation }) => {
       <p>{reservation.dateCheckOut}</p>
       <p>{reservation.guests}</p>
     </article>
+   
   )
 }
 
