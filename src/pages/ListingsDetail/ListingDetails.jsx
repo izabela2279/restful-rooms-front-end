@@ -35,7 +35,7 @@ const ListingDetails = (props) => {
 
     const handleAddReservation = async (reservationData) => {
         const newReservation = await listingService.createReservation(id, reservationData)
-        setListing({...listing, reservations: [...(listing.reservations|| []), newReservation] })
+        setListing({ ...listing, reservations: [...(listing.reservations || []), newReservation] })
     }
 
 
