@@ -114,7 +114,6 @@ const App = () => {
             </ProtectedRoute>
           }
         />
-
         <Route
           path="/listings/new"
           element={
@@ -123,7 +122,7 @@ const App = () => {
             </ProtectedRoute>
           }
         />
-         <Route
+        <Route
           path="/listings/:id"
           element={
             <ProtectedRoute user={user}>
@@ -131,8 +130,6 @@ const App = () => {
             </ProtectedRoute>
           }
         />
-
-
         <Route
           path="/listings/:id/edit"
           element={
@@ -141,11 +138,6 @@ const App = () => {
             </ProtectedRoute>
           }
         />
-
-
-       
-        
-
       </Routes>
     </>
   )
