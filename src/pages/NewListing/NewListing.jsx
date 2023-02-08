@@ -171,7 +171,7 @@ const NewListing = (props) => {
 						className="form-control"
 						id="photo-upload"
 						name="photo"
-						onChange={handleChangePhoto}
+						multiple onChange={handleChangePhoto}
 					/>
 				</div>
         <button type="submit">SUBMIT</button>
