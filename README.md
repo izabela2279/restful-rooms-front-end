@@ -12,3 +12,18 @@
 <h1>
 <a href="https://restful-rooms.netlify.app/" rel="nofollow">Try the App!</a>
 </h1>
+
+<h2> 
+<a href="https://trello.com/b/TlP5Zb3O/restful-rooms"> Trello Planning</a>
+</h2>
+
+<br>
+
+<h2>Dev Tools</h2>
+
+<ul>
+<li>VS Code</li>
+<li>GitHub</li>
+<li>Git</li>
+<li>Netlify</li>
+</ul>
