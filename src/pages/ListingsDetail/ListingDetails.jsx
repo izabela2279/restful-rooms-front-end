@@ -55,31 +55,28 @@ const ListingDetails = (props) => {
             {/* <AuthorInfo content={listing} /> */}
 
             {listing.author._id === props.user.profile &&
-              <>
+            <>
                 <Link to={`/listings/${id}/edit`} state={listing}>Edit</Link>
                 <button onClick={() => props.handleDeleteListing(id)}>Delete</button>
-              </>
+            </>
             }
-            </span>
-                
+            </span>   
             <section>
                 <h1>Review</h1>
                 <NewReview handleAddReview={handleAddReview} />
                 <Reviews reviews={listing.reviews} user={props.user} />
             </section>
-
             <section>
                 <h1>Reservations</h1>
                 <NewReservation handleAddReservation={handleAddReservation} />
                 <Reservations reservations={listing.reservations} user={props.user} />
             </section>
-            
-            </main>
             <section>
                 <h1>Activities</h1>
                 <NewActivity handleAddActivity={handleAddActivity} />
                 <Activities activities={listing.activities} user={props.user} />
             </section>  
+            </main>
         </>
     )
 }
