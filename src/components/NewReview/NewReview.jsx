@@ -4,10 +4,7 @@ import styles from './NewReview.module.css'
 // Components
 
 const NewReview = (props) => {
-  const [form, setForm] = useState({
-    text: '',
-  
-  })
+  const [form, setForm] = useState({})
 
   const handleChange = ({ target }) => {
     setForm({ ...form, [target.name]: target.value })
