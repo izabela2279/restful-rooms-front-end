@@ -35,54 +35,48 @@ const ListingDetails = (props) => {
 
     const handleAddReservation = async (reservationData) => {
         const newReservation = await listingService.createReservation(id, reservationData)
-        setListing({ ...listing, reservations: [...(listing.reservations || []), newReservation] })
+        setListing({...listing, reservations: [...(listing.reservations|| []), newReservation] })
     }
 
 
     console.log('Listing data', listing)
     if (!listing) return <h1>Loading</h1>
-
+    
     return (
         <>
             <main >
-
                 <h1>{listing.title}</h1>
-                {listing.photo}
+                <img alt="" src={listing.photo} />
                 <p>{listing.bedrooms} {listing.beds} {listing.baths}{listing.guests}</p>
                 <p>{listing.amenities}</p>
                 <p>{listing.description}</p>
 
             <span>
-                    {/* <AuthorInfo content={listing} /> */}
+            {/* <AuthorInfo content={listing} /> */}
 
-                    {listing.author._id === props.user.profile &&
-                        <>
-                            <Link to={`/listings/${id}/edit`} state={listing}>Edit</Link>
-                            <button onClick={() => props.handleDeleteListing(id)}>Delete</button>
-                        </>
-                    }
-                  </span>
-
-                <section>
-                    <h1>Review</h1>
-                    <NewReview handleAddReview={handleAddReview} />
-                    <Reviews reviews={listing.reviews} user={props.user} />
-                </section>
-
-                <section>
-                    <h1>Reservations</h1>
-                    <NewReservation handleAddReservation={handleAddReservation} />
-                    <Reservations reservations={listing.reservations} user={props.user} />
-                </section>
-
-            </main>
+            {listing.author._id === props.user.profile &&
+            <>
+                <Link to={`/listings/${id}/edit`} state={listing}>Edit</Link>
+                <button onClick={() => props.handleDeleteListing(id)}>Delete</button>
+            </>
+            }
+            </span>   
+            <section>
+                <h1>Review</h1>
+                <NewReview handleAddReview={handleAddReview} />
+                <Reviews reviews={listing.reviews} user={props.user} />
+            </section>
+            <section>
+                <h1>Reservations</h1>
+                <NewReservation handleAddReservation={handleAddReservation} />
+                <Reservations reservations={listing.reservations} user={props.user} />
+            </section>
             <section>
                 <h1>Activities</h1>
                 <NewActivity handleAddActivity={handleAddActivity} />
                 <Activities activities={listing.activities} user={props.user} />
-            </section>
-
-
+            </section>  
+            </main>
         </>
     )
 }

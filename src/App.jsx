@@ -41,10 +41,11 @@ const App = () => {
 
   const handleAddListing = async (listingData, photo) => {
     const newListing = await listingService.create(listingData)
+    console.log(newListing);
     if (photo) {
       newListing.photo = await listingPhotoHelper(photo, newListing._id)
     }
-    setListings([newListing, ...listings])
+    setListings([...listings, newListing])
     navigate('/listings')
   }
 
@@ -113,7 +114,6 @@ const App = () => {
             </ProtectedRoute>
           }
         />
-
         <Route
           path="/listings/new"
           element={
@@ -122,7 +122,7 @@ const App = () => {
             </ProtectedRoute>
           }
         />
-         <Route
+        <Route
           path="/listings/:id"
           element={
             <ProtectedRoute user={user}>
@@ -130,8 +130,6 @@ const App = () => {
             </ProtectedRoute>
           }
         />
-
-
         <Route
           path="/listings/:id/edit"
           element={
@@ -140,11 +138,6 @@ const App = () => {
             </ProtectedRoute>
           }
         />
-
-
-       
-        
-
       </Routes>
     </>
   )
