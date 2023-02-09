@@ -9,7 +9,7 @@ const ReviewCard = ({ review, listingId, handleDeleteReview, user }) => {
           DELETE
         </button>
       </header>
-      <p>{review.text}</p>
+      <p> {review.text}</p>
     </article>
   )
 }
