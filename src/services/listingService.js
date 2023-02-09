@@ -117,20 +117,6 @@ const deleteListing = async (id) => {
   }
 }
 
-const deleteReview = async (id, reviewId) => {
-  try {
-    const res = await fetch(`${BASE_URL}/${id}/reviews/${reviewId}`, {
-      method: 'DELETE',
-      headers: {
-        'Authorization': `Bearer ${tokenService.getToken()}`
-      }
-    })
-    return res.json()
-  } catch (error) {
-    console.log(error)
-  }
-}
-
 const createReservation = async (id, reservationData) => {
   try {
     const res = await fetch(`${BASE_URL}/${id}/reservations`, {
@@ -156,6 +142,5 @@ export {
   createReview,
   createActivity,
   deleteListing,
-  createReservation,
-  deleteReview
+  createReservation
 }

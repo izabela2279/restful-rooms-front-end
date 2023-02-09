@@ -12,7 +12,7 @@ const NewListing = (props) => {
     beds: 1,
     baths: 1,
     guests: 1,
-    amenities: 'FEZIBO Height Adjustable Electric Standing desk with Double Drawer, 48 x 24 Inch Table with Storage Shelf, Sit Stand Desk with Splice Board'
+    amenities: 'Dev Tools'
   })
   const handleChange = ({ target }) => {
     setForm({ ...form, [target.name]: target.value })
@@ -149,18 +149,9 @@ const NewListing = (props) => {
           value={form.amenities}
           onChange={handleChange}
         >
-          <option input="1">FEZIBO Height Adjustable Electric Standing desk with Double Drawer, 48 x 24 Inch Table with Storage Shelf, Sit Stand Desk with Splice Board</option>
-          <option input="2">ZettaGuard HDMI 3×1 switch x 2 (for switching monitors between work laptop and home setup)</option>
-          <option input="3">UGREEN USB switch (for switching USB inputs between work laptop and home setup)</option>
-          <option input="4">Acer 27 inch monitors x 3</option>
-          <option input="5">Logitech webcam (camera and mic)</option>
-          <option input="6">HeadsetAfterShokz Bluetooth headset (speaker)</option>
-          <option input="7">Google Home Mini pair for playing music</option>
-          <option input="8">Lenovo keyboard and mouse (external, wired)</option>
-          <option input="9">an Anker USB-C Wall Charger, Premium 60W 5-Port Desktop Charger—4 USB 3.0 + 1 USB-C on one charger</option>
-          <option input="10">Herman Miller embody ergonomic office chair</option>
-          <option input="11">Standing mat</option>
-          <option input="12">Phone Chargers android and apple compatible</option>
+          <option input="1">
+            Dev Tools
+          </option>
         </select>
         <div className="form-group mb-4">
 					<label htmlFor="photo-upload" className="form-label">
