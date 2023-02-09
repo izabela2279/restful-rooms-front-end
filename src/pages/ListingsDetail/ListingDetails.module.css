@@ -11,6 +11,12 @@
 
 }
 
+.container img{
+  width: 800px;
+  height: 441px;
+  object-fit: cover;
+  border-radius: 20px;
+}
 
 
 @media (min-width: 1440px) {
@@ -21,6 +27,13 @@
       margin-left: 320px;
       margin-right: 320px;
   }
+  .container img{
+    width: 1320px;
+    height: 464px;
+    object-fit: cover;
+    border-radius: 20px;
+  }
+  
 }
 
 @media (min-width: 950px) {
@@ -28,16 +41,23 @@
     padding-left: 40px ;
     padding-right: 40px !important;
 }
+
+
 }
 @media (min-width: 744px) {
 .container {
     padding-left: 40px !important;
     padding-right: 40px !important;
 }
+
+
+
 }
 @media (min-width: 375px){
  .container{
     padding-left: 24px !important;
     padding-right: 24px !important;
 }
+
+
 }
