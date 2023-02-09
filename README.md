@@ -3,10 +3,6 @@
 
 <img src="" alt="restful-rooms">
 
-<h1>
-<a href="https://github.com/izabela2279/restful-rooms-back-end" rel="nofollow">Back End Repo</a>
-</h1>
-
 <p>
 <em>Restful Rooms</em> is a platform for finding short-term accommodations for programmers who are traveling for work. Like Airbnb, it allows homeowners to rent out their spare rooms or entire homes to guests. However, Restful Rooms caters specifically to the needs of programmers, offering features such as fast Wi-Fi, ergonomic workspaces, and a quiet environment for coding. The goal of Restful Rooms is to create a welcoming and productive environment for programmers while they are away from home.</p>
 
@@ -22,6 +18,10 @@
 
 <h3> 
 <a href="https://trello.com/b/TlP5Zb3O/restful-rooms"> Trello Planning</a>
+</h3>
+
+<h3>
+<a href="https://github.com/izabela2279/restful-rooms-back-end" rel="nofollow">Back End Repo</a>
 </h3>
 
 <br>
@@ -70,9 +70,9 @@ Check out the
 
 <ul class="contains-task-list">
 
-<li class="task-list-item"><input type="checkbox" id disabled class="task-list-item-checkbox"> Be able to edit and delete reservations. </li>
-<li class="task-list-item"><input type="checkbox" id disabled class="task-list-item-checkbox"> Be able to go to a page where I can see all my reservations. </li>
-<li class="task-list-item"><input type="checkbox" id disabled class="task-list-item-checkbox"> Be able to see listings by rental types and location. </li>
-<li class="task-list-item"><input type="checkbox" id disabled class="task-list-item-checkbox"> Be able to go to a page where I can see all my reservations. </li>
-<li class="task-list-item"><input type="checkbox" id disabled class="task-list-item-checkbox"> AAU and a guest, I should be able to see a chat to ask questions. </li>
+ - [ ] <li class="task-list-item"><input type="checkbox" id disabled class="task-list-item-checkbox"> Be able to edit and delete reservations. </li>
+ - [ ] <li class="task-list-item"><input type="checkbox" id disabled class="task-list-item-checkbox"> Be able to go to a page where I can see all my reservations. </li>
+ - [ ] <li class="task-list-item"><input type="checkbox" id disabled class="task-list-item-checkbox"> Be able to see listings by rental types and location. </li>
+ - [ ] <li class="task-list-item"><input type="checkbox" id disabled class="task-list-item-checkbox"> Be able to go to a page where I can see all my reservations. </li>
+ - [ ] <li class="task-list-item"><input type="checkbox" id disabled class="task-list-item-checkbox"> AAU and a guest, I should be able to see a chat to ask questions. </li>
 </ul>
