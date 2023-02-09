@@ -38,8 +38,8 @@ const ListingDetails = (props) => {
         setListing({ ...listing, reservations: [...(listing.reservations || []), newReservation] })
     }
 
-    const handleDeleteReview = async (listingId, reviewId) => {
-        await listingService.deleteReview(listingId, reviewId)
+    const handleDeleteReview = async (id, reviewId) => {
+        await listingService.deleteReview(id, reviewId)
         setListing({ ...listing, reviews: listing.reviews.filter((c) => c._id !== reviewId) })
     }
 
@@ -82,8 +82,8 @@ const ListingDetails = (props) => {
                 <h1>Review</h1>
                 <NewReview handleAddReview={handleAddReview} />
                 <Reviews 
-                    reviews={listing.reviews} 
                     user={props.user} 
+                    reviews={listing.reviews} 
                     handleDeleteReview = {handleDeleteReview} 
                     />
             </section>

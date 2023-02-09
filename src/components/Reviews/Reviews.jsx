@@ -10,6 +10,7 @@ const Reviews = (props) => {
           key={review._id}
           review={review}
           user={props.user}
+          id={props.id}
           handleDeleteReview = {props.handleDeleteReview}
         />
       ))}

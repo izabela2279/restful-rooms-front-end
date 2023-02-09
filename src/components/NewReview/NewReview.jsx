@@ -27,6 +27,20 @@ const NewReview = (props) => {
         placeholder="Add a Review"
         onChange={handleChange}
       />
+      <label htmlFor="rating-input">Rating</label>
+        <select
+          required
+          name="rating"
+          id="rating-input"
+          value={form.rating}
+          onChange={handleChange}
+        >
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+        </select>
       <button type="submit">Create</button>
     </form>
   )

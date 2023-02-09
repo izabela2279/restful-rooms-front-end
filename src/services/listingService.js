@@ -117,9 +117,9 @@ const deleteListing = async (id) => {
   }
 }
 
-const deleteReview = async (listingId, reviewId) => {
+const deleteReview = async (id, reviewId) => {
   try {
-    const res = await fetch(`${BASE_URL}/${listingId}/reviews/${reviewId}`, {
+    const res = await fetch(`${BASE_URL}/${id}/reviews/${reviewId}`, {
       method: 'DELETE',
       headers: {
         'Authorization': `Bearer ${tokenService.getToken()}`
