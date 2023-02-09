@@ -73,7 +73,7 @@ const ListingDetails = (props) => {
                     }
                 </span>
                 </div>
-                <img alt="" src={listing.photo} />
+                <img alt="" src={listing.photo}  />
                 <h2>{listing.guests} guests . {listing.bedrooms} bedrooms . {listing.beds} beds . {listing.baths} baths</h2>
                 <div className="resDev" style={{ display: 'flex', justifyContent: 'space-between', gap: 100 }}>
                     <div id='description'>
