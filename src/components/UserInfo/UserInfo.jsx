@@ -13,3 +13,4 @@ const UserInfo = ({ content }) => {
 }
 
 export default UserInfo
+
