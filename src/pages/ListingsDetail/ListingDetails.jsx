@@ -47,7 +47,7 @@ const ListingDetails = (props) => {
             <main className ={styles.container} >
                 <h1>{listing.title}</h1>
                 <img alt="" src={listing.photo} />
-                <p>{listing.guests} guests . {listing.bedrooms} bedrooms . {listing.beds} beds . {listing.baths} baths</p>
+                <h2>{listing.guests} guests . {listing.bedrooms} bedrooms . {listing.beds} beds . {listing.baths} baths</h2>
                 <div className="resDev" style={{ display: 'flex', justifyContent:'space-between', gap:100 }}>
                 <div id='description'>
                 <p>{listing.description}</p>
