@@ -7,6 +7,12 @@ import Reviews from "../../components/Reviews/Reviews";
 import NewReservation from "../../components/NewReservation/NewReservation";
 import Reservations from "../../components/Reservations/Reservations";
 import styles from './ListingDetails.module.css'
+//Icons
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faEnvelope } from '@fortawesome/free-solid-svg-icons'
+import { faEdit } from '@fortawesome/free-solid-svg-icons'
+import { faTrash } from '@fortawesome/free-solid-svg-icons'
+
 
 //Services
 import * as listingService from "../../services/listingService";
@@ -46,53 +52,59 @@ const ListingDetails = (props) => {
 
     console.log('Listing data', listing)
     if (!listing) return <h1>Loading</h1>
-    
+
     return (
         <>
-            <main className ={styles.container} >
+            <main className={styles.container} >
+                <div id="top" style={{display:"flex", justifyContent:"space-between"}}>
                 <h1>{listing.title}</h1>
-                <img alt="" src={listing.photo} />
-                <h2>{listing.guests} guests . {listing.bedrooms} bedrooms . {listing.beds} beds . {listing.baths} baths</h2>
-                <div className="resDev" style={{ display: 'flex', justifyContent:'space-between', gap:100 }}>
-                <div id='description'>
-                <p>{listing.description}</p>
+
+                <span style= {{display:"flex", justifyContent: "center", gap:5}}>
+                    {/* <AuthorInfo content={listing} /> */}
+
+                    {listing.author._id === props.user.profile &&
+                        <>
+                            <Link to={`/listings/${id}/edit`} state={listing}> <h2><FontAwesomeIcon icon={faEdit} /></h2>
+                            </Link>
+                            <button style ={{width:70, height:70, alignItems:"center"}} onClick={() => props.handleDeleteListing(id)}>
+                                <h2><FontAwesomeIcon icon={faTrash} /></h2>
+                            </button>
+                        </>
+                    }
+                </span>
                 </div>
-                
-                <section>
-                <h1>Reservations</h1>
-                <NewReservation handleAddReservation={handleAddReservation} />
-                <Reservations reservations={listing.reservations} user={props.user} />
-                </section>
+                <img alt="" src={listing.photo}  />
+                <h2>{listing.guests} guests . {listing.bedrooms} bedrooms . {listing.beds} beds . {listing.baths} baths</h2>
+                <div className="resDev" style={{ display: 'flex', justifyContent: 'space-between', gap: 100 }}>
+                    <div id='description'>
+                        <p>{listing.description}</p>
+                    </div>
+
+                    <section>
+                        <h1>Reservations  <FontAwesomeIcon icon={faEnvelope} /></h1>
+                        <NewReservation handleAddReservation={handleAddReservation} />
+                        <Reservations reservations={listing.reservations} user={props.user} />
+                    </section>
                 </div>
                 <p>{listing.amenities}</p>
 
-                
 
-            <span>
-            {/* <AuthorInfo content={listing} /> */}
 
-            {listing.author._id === props.user.profile &&
-            <>
-                <Link to={`/listings/${id}/edit`} state={listing}>Edit</Link>
-                <button onClick={() => props.handleDeleteListing(id)}>Delete</button>
-            </>
-            }
-            </span>   
-            <section>
-                <h1>Review</h1>
-                <NewReview handleAddReview={handleAddReview} />
-                <Reviews 
-                    user={props.user} 
-                    reviews={listing.reviews} 
-                    handleDeleteReview = {handleDeleteReview} 
+                <section>
+                    <h1>Review  </h1>
+                    <NewReview handleAddReview={handleAddReview} />
+                    <Reviews
+                        reviews={listing.reviews}
+                        user={props.user}
+                        handleDeleteReview={handleDeleteReview}
                     />
-            </section>
-         
-            <section>
-                <h1>Activities</h1>
-                <NewActivity handleAddActivity={handleAddActivity} />
-                <Activities activities={listing.activities} user={props.user} />
-            </section>  
+                </section>
+
+                <section>
+                    <h1>Activities</h1>
+                    <NewActivity handleAddActivity={handleAddActivity} />
+                    <Activities activities={listing.activities} user={props.user} />
+                </section>
             </main>
         </>
     )
