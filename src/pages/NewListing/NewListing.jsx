@@ -30,7 +30,8 @@ const NewListing = (props) => {
   return (
     <main className={styles.container}>
       <form onSubmit={handleSubmit}>
-        <label htmlFor="title-input">Title</label>
+        <div id= "input" style={{ display: "flex", flexDirection: "column"}}>
+        <label htmlFor="title-input"></label>
         <input
           required
           type="text"
@@ -40,7 +41,7 @@ const NewListing = (props) => {
           placeholder="Title"
           onChange={handleChange}
         />
-        <label htmlFor="text-input">Location</label>
+        <label htmlFor="text-input"></label>
         <input
           required
           type="text"
@@ -50,7 +51,7 @@ const NewListing = (props) => {
           placeholder="Location"
           onChange={handleChange}
         />
-        <label htmlFor="text-input">Price</label>
+        <label htmlFor="text-input"></label>
         <input
           required
           type="text"
@@ -60,7 +61,7 @@ const NewListing = (props) => {
           placeholder="Price"
           onChange={handleChange}
         />
-        <label htmlFor="text-input">Description</label>
+        <label htmlFor="text-input"></label>
         <textarea
           required
           type="text"
@@ -70,6 +71,8 @@ const NewListing = (props) => {
           placeholder="Description"
           onChange={handleChange}
         />
+        </div>
+        <div id="select">
         <label htmlFor="category-input">Bedrooms</label>
         <select
           required
@@ -157,6 +160,7 @@ const NewListing = (props) => {
 					<label htmlFor="photo-upload" className="form-label">
 						Upload Photo
 					</label>
+          </div>
 					<input
 						type="file"
 						className="form-control"
