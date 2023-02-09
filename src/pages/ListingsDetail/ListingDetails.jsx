@@ -44,12 +44,24 @@ const ListingDetails = (props) => {
     
     return (
         <>
-            <main >
+            <main className ={styles.container} >
                 <h1>{listing.title}</h1>
                 <img alt="" src={listing.photo} />
-                <p>{listing.bedrooms} {listing.beds} {listing.baths}{listing.guests}</p>
-                <p>{listing.amenities}</p>
+                <h2>{listing.guests} guests . {listing.bedrooms} bedrooms . {listing.beds} beds . {listing.baths} baths</h2>
+                <div className="resDev" style={{ display: 'flex', justifyContent:'space-between', gap:100 }}>
+                <div id='description'>
                 <p>{listing.description}</p>
+                </div>
+                
+                <section>
+                <h1>Reservations</h1>
+                <NewReservation handleAddReservation={handleAddReservation} />
+                <Reservations reservations={listing.reservations} user={props.user} />
+                </section>
+                </div>
+                <p>{listing.amenities}</p>
+
+                
 
             <span>
             {/* <AuthorInfo content={listing} /> */}
@@ -66,11 +78,7 @@ const ListingDetails = (props) => {
                 <NewReview handleAddReview={handleAddReview} />
                 <Reviews reviews={listing.reviews} user={props.user} />
             </section>
-            <section>
-                <h1>Reservations</h1>
-                <NewReservation handleAddReservation={handleAddReservation} />
-                <Reservations reservations={listing.reservations} user={props.user} />
-            </section>
+         
             <section>
                 <h1>Activities</h1>
                 <NewActivity handleAddActivity={handleAddActivity} />
