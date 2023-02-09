@@ -44,10 +44,18 @@
 
 <h2>Contributors</h2>
 
+<h3>
 <a href="https://github.com/Kay7531"> Kay Mumin</a>
+</h3>
+<h3>
 <a href="https://github.com/dayanalittle"> Dayana Little</a>
+</h3>
+<h3>
 <a href="https://github.com/juanm98"> Juan Garcia</a>
+</h3>
+<h3>
 <a href="https://github.com/izabela2279"> Izabela Szeremeta</a>
+</h3>
 
 <h2>Dev Tools</h2>
 
@@ -68,11 +76,8 @@ Check out the
 
 <h2>Ice Box 🧊</h2>
 
-<ul class="contains-task-list">
-
- - [ ] <li class="task-list-item"><input type="checkbox" id disabled class="task-list-item-checkbox"> Be able to edit and delete reservations. </li>
- - [ ] <li class="task-list-item"><input type="checkbox" id disabled class="task-list-item-checkbox"> Be able to go to a page where I can see all my reservations. </li>
- - [ ] <li class="task-list-item"><input type="checkbox" id disabled class="task-list-item-checkbox"> Be able to see listings by rental types and location. </li>
- - [ ] <li class="task-list-item"><input type="checkbox" id disabled class="task-list-item-checkbox"> Be able to go to a page where I can see all my reservations. </li>
- - [ ] <li class="task-list-item"><input type="checkbox" id disabled class="task-list-item-checkbox"> AAU and a guest, I should be able to see a chat to ask questions. </li>
-</ul>
+ - [ ] Be able to edit and delete reservations. 
+ - [ ] Be able to go to a page where I can see all my reservations.
+ - [ ] Be able to see listings by rental types and location.
+ - [ ] Be able to go to a page where I can see all my reservations.
+ - [ ] AAU and a guest, I should be able to see a chat to ask questions. 
