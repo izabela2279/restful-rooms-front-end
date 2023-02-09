@@ -4,7 +4,7 @@
 <img src="" alt="restful-rooms">
 
 <h1>
-<a href="https://github.com/izabela2279/restful-rooms-front-end" rel="nofollow">Back End Repo</a>
+<a href="https://github.com/izabela2279/restful-rooms-back-end" rel="nofollow">Back End Repo</a>
 </h1>
 
 <p>
