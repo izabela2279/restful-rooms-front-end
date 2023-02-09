@@ -43,13 +43,7 @@ const ListingDetails = (props) => {
         const newReservation = await listingService.createReservation(id, reservationData)
         setListing({ ...listing, reservations: [...(listing.reservations || []), newReservation] })
     }
-
-    const handleDeleteReview = async (listingId, reviewId) => {
-        await listingService.deleteReview(listingId, reviewId)
-        setListing({ ...listing, reviews: listing.reviews.filter((c) => c._id !== reviewId) })
-    }
-
-
+    
     console.log('Listing data', listing)
     if (!listing) return <h1>Loading</h1>
 
