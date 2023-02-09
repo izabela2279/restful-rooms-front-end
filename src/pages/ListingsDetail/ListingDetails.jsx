@@ -82,7 +82,7 @@ const ListingDetails = (props) => {
             <section>
                 <h1>Review</h1>
                 <NewReview handleAddReview={handleAddReview} />
-                <Reviews reviews={listing.reviews} user={props.user} />
+                <Reviews reviews={listing.reviews} user={props.user} handleDeleteReview = {handleDeleteReview} />
             </section>
          
             <section>
