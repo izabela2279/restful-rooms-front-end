@@ -38,6 +38,11 @@ const ListingDetails = (props) => {
         setListing({ ...listing, reservations: [...(listing.reservations || []), newReservation] })
     }
 
+    const handleDeleteReview = async (listingId, reviewId) => {
+        await listingService.deleteReview(listingId, reviewId)
+        setListing({ ...listing, reviews: listing.reviews.filter((c) => c._id !== reviewId) })
+    }
+
 
     console.log('Listing data', listing)
     if (!listing) return <h1>Loading</h1>
@@ -46,8 +51,7 @@ const ListingDetails = (props) => {
         <>
             <main className ={styles.container} >
                 <h1>{listing.title}</h1>
-                <img alt="" src={listing.photo[0]} />
-                <img alt="" src={listing.photo[1]} />
+                <img alt="" src={listing.photo} />
                 <h2>{listing.guests} guests . {listing.bedrooms} bedrooms . {listing.beds} beds . {listing.baths} baths</h2>
                 <div className="resDev" style={{ display: 'flex', justifyContent:'space-between', gap:100 }}>
                 <div id='description'>
@@ -77,7 +81,11 @@ const ListingDetails = (props) => {
             <section>
                 <h1>Review</h1>
                 <NewReview handleAddReview={handleAddReview} />
-                <Reviews reviews={listing.reviews} user={props.user} />
+                <Reviews 
+                    reviews={listing.reviews} 
+                    user={props.user} 
+                    handleDeleteReview = {handleDeleteReview} 
+                    />
             </section>
          
             <section>
