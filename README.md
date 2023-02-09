@@ -42,6 +42,13 @@
 
 <br>
 
+<h2>Contributors</h2>
+
+<a href="https://github.com/Kay7531"> Kay Mumin</a>
+<a href="https://github.com/dayanalittle"> Dayana Little</a>
+<a href="https://github.com/juanm98"> Juan Garcia</a>
+<a href="https://github.com/izabela2279"> Izabela Szeremeta</a>
+
 <h2>Dev Tools</h2>
 
 <ul>
