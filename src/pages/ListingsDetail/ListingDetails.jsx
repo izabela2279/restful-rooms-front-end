@@ -106,7 +106,6 @@ const ListingDetails = (props) => {
                     <Reviews
                         reviews={listing.reviews}
                         user={props.user}
-                        handleDeleteReview={handleDeleteReview}
                     />
                 </section>
 
