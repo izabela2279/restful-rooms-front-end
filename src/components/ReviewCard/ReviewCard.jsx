@@ -5,9 +5,9 @@ const ReviewCard = ({ review, listingId, handleDeleteReview, user }) => {
     <article>
       <header>
         <UserInfo content={review} />
-      <button onClick={()=> handleDeleteReview(listingId, review._id)}>
-                DELETE
-              </button>
+        <button onClick={() => handleDeleteReview(listingId, review._id)}>
+          DELETE
+        </button>
       </header>
       <p>{review.text}</p>
     </article>
