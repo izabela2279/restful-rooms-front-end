@@ -56,24 +56,24 @@ const ListingDetails = (props) => {
     return (
         <>
             <main className={styles.container} >
-                <div id="top" style={{display:"flex", justifyContent:"space-between"}}>
-                <h1>{listing.title}</h1>
+                <div id="top" style={{ display: "flex", justifyContent: "space-between" }}>
+                    <h1>{listing.title}</h1>
 
-                <span style= {{display:"flex", justifyContent: "center", gap:5}}>
-                    {/* <AuthorInfo content={listing} /> */}
+                    <span style={{ display: "flex", justifyContent: "center", gap: 5 }}>
+                        {/* <AuthorInfo content={listing} /> */}
 
-                    {listing.author._id === props.user.profile &&
-                        <>
-                            <Link to={`/listings/${id}/edit`} state={listing}> <h2><FontAwesomeIcon icon={faEdit} /></h2>
-                            </Link>
-                            <button style ={{width:70, height:70, alignItems:"center"}} onClick={() => props.handleDeleteListing(id)}>
-                                <h2><FontAwesomeIcon icon={faTrash} /></h2>
-                            </button>
-                        </>
-                    }
-                </span>
+                        {listing.author._id === props.user.profile &&
+                            <>
+                                <Link to={`/listings/${id}/edit`} state={listing}> <h2><FontAwesomeIcon icon={faEdit} /></h2>
+                                </Link>
+                                <button style={{ width: 70, height: 70, alignItems: "center" }} onClick={() => props.handleDeleteListing(id)}>
+                                    <h2><FontAwesomeIcon icon={faTrash} /></h2>
+                                </button>
+                            </>
+                        }
+                    </span>
                 </div>
-                <img alt="" src={listing.photo}  />
+                <img alt="" src={listing.photo} />
                 <h2>{listing.guests} guests . {listing.bedrooms} bedrooms . {listing.beds} beds . {listing.baths} baths</h2>
                 <div className="resDev" style={{ display: 'flex', justifyContent: 'space-between', gap: 100 }}>
                     <div id='description'>
@@ -86,7 +86,23 @@ const ListingDetails = (props) => {
                         <Reservations reservations={listing.reservations} user={props.user} />
                     </section>
                 </div>
-                <p>{listing.amenities}</p>
+                <div>
+                    <h2>{listing.amenities}</h2>
+                    <ul>
+                        <li>FEZIBO Height Adjustable Electric Standing desk.</li>
+                        <li>ZettaGuard HDMI 3×1 switch x 2 </li>
+                        <li>UGREEN USB switch</li>
+                        <li>Acer 27 inch monitors x 3</li>
+                        <li>Logitech webcam </li>
+                        <li>HeadsetAfterShokz Bluetooth headset</li>
+                        <li>Google Home Mini pair</li>
+                        <li>Lenovo keyboard and mouse</li>
+                        <li>an Anker USB-C Wall Charger, Premium 60W 5-Port Desktop Charger—4 USB 3.0 + 1 USB-C on one charger</li>
+                        <li>Herman Miller embody ergonomic office chair</li>
+                        <li>Standing mat</li>
+                        <li>Phone Chargers android and apple compatible</li>
+                    </ul>
+                </div>
 
 
 
