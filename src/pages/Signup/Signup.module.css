@@ -23,3 +23,8 @@
   border: 1px solid black;
   width: 300px;
 }
+
+.container label {
+  font-weight: 600;
+  margin: 7px 0px 14px 0px;
+}
