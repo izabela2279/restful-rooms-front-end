@@ -1,10 +1,14 @@
-// import ProfileIcon from '../../assets/icons/profile.png'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faUser } from '@fortawesome/free-regular-svg-icons'
 
 const UserInfo = ({ content }) => {
-  // const photo = content.author.photo ? content.author.photo : ProfileIcon
+  
   return (
     <div>
-      {/* <img src={photo} alt="The user's avatar" /> */}
+     
+      {content.author.photo ?
+        <img src={content.author.photo} alt="The user's avatar" />:
+         <FontAwesomeIcon icon={faUser} />}
       <section>
         <h4>{content.author.name}</h4>
       </section>
@@ -13,3 +17,4 @@ const UserInfo = ({ content }) => {
 }
 
 export default UserInfo
+
