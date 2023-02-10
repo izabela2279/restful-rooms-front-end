@@ -101,6 +101,7 @@ const SignupForm = props => {
         <label htmlFor="photo-upload" className={styles.label}>
           Upload Photo
         </label>
+        <div/>
         <input
           type="file"
           id="photo-upload"
