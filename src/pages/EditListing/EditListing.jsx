@@ -56,7 +56,7 @@ const EditListing = (props) => {
         />
         </div>
         <div>
-         <label htmlFor="text-input">Description</label>
+         <label htmlFor="text-input">Description: </label>
 				<textarea
           required
           type="text"

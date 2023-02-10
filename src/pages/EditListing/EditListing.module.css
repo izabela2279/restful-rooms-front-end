@@ -31,12 +31,12 @@
 }
 
 .container button {
-  color: black;
+  color: #ffff;
  
   font-weight: 600;
   margin: 21px 0px 0px 0px;
   background: var(--primary);
-  background-color: rgb(178, 178, 227);
+  background-color: #FF385C;
 }
 
 .container a {
@@ -72,3 +72,7 @@ form {
   text-align: right;
 }
 
+label {
+  display: flex;
+  text-align: center;
+}
