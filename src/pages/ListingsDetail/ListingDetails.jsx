@@ -13,7 +13,6 @@ import { faEnvelope } from '@fortawesome/free-solid-svg-icons'
 import { faEdit } from '@fortawesome/free-solid-svg-icons'
 import { faTrash } from '@fortawesome/free-solid-svg-icons'
 
-
 //Services
 import * as listingService from "../../services/listingService";
 
@@ -98,8 +97,6 @@ const ListingDetails = (props) => {
                     </ul>
                 </div>
 
-
-
                 <section>
                     <h1>Review  </h1>
                     <NewReview handleAddReview={handleAddReview} />
@@ -108,7 +105,6 @@ const ListingDetails = (props) => {
                         user={props.user}
                     />
                 </section>
-
                 <section>
                     <h1>Activities</h1>
                     <NewActivity handleAddActivity={handleAddActivity} />

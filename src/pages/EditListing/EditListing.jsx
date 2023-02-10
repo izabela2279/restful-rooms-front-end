@@ -6,7 +6,6 @@ const EditListing = (props) => {
   const { state } = useLocation()
   const [form, setForm] = useState(state)
 
-  console.log(state)
   const handleChange = ({ target }) => {
     setForm({ ...form, [target.name]: target.value })
   }
@@ -56,7 +55,7 @@ const EditListing = (props) => {
         />
         </div>
         <div>
-         <label htmlFor="text-input">Description: </label>
+        <label htmlFor="text-input">Description: </label>
 				<textarea
           required
           type="text"

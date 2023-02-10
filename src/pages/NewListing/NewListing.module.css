@@ -1,72 +1,69 @@
 .container {
-    height: 100%;
-    display: flex;
-    overflow-x: hidden;
-    overflow-y: scroll;
-    padding: 28px 21px;
-    align-items: center;
-    flex-direction: column;
-    margin-right: 100px;
-    margin-left: 100px;
-  }
+  height: 100%;
+  display: flex;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  padding: 28px 21px;
+  align-items: center;
+  flex-direction: column;
+  margin-right: 100px;
+  margin-left: 100px;
+}
   
-  .container input, textarea, select, button { 
-    width: 100%;
-    padding: 14px;
-    font-size: 14px;
-    resize: vertical;
-    border-radius: 5px;
-    margin: 7px 0px 14px 0px;
-    border: 1px solid var(--border);
-    font-family: canada-type-gibson, sans-serif;
-  }
+.container input, textarea, select, button { 
+  width: 100%;
+  padding: 14px;
+  font-size: 14px;
+  resize: vertical;
+  border-radius: 5px;
+  margin: 7px 0px 14px 0px;
+  border: 1px solid var(--border);
+  font-family: canada-type-gibson, sans-serif;
+}
   
-  .container textarea {
-    min-height: 50px;
-  }
+.container textarea {
+  min-height: 50px;
+}
   
-  .container label {
-    font-weight: 600;
-    margin: 7px 0px 14px 0px;
-  }
+.container label {
+  font-weight: 600;
+  margin: 7px 0px 14px 0px;
+}
   
-  .container button {
-    color: black;
-   
-    font-weight: 600;
-    margin: 21px 0px 0px 0px;
-    background: var(--primary);
-    background-color: rgb(178, 178, 227);
-  }
+.container button {
+  color: black; 
+  font-weight: 600;
+  margin: 21px 0px 0px 0px;
+  background: var(--primary);
+  background-color: rgb(178, 178, 227);
+}
   
-  .container a {
-    border: none;
-    font-size: 14px;
-    background: none;
-    font-weight: 500;
-    margin-top: 14px;
-    text-align: center;
-    color: rgb(200, 200, 200);
-  }
+.container a {
+  border: none;
+  font-size: 14px;
+  background: none;
+  font-weight: 500;
+  margin-top: 14px;
+  text-align: center;
+  color: rgb(200, 200, 200);
+}
   
-  input:focus, select:focus, textarea:focus {
-    outline: none;
-    border: 1px solid black;
-  }
-  .container input {
-    border: 1px solid black;
-    width: 700px;
-  }
+input:focus, select:focus, textarea:focus {
+  outline: none;
+  border: 1px solid black;
+}
 
-  .container textarea {
-    border: 1px solid black;
-    width: 700px;
-  }
+.container input {
+  border: 1px solid black;
+  width: 700px;
+}
 
-  .container button {
-    background-color: #FF385C;
-    color: white;
-    
-  }
+.container textarea {
+  border: 1px solid black;
+  width: 700px;
+}
 
-  
+.container button {
+  background-color: #FF385C;
+  color: white; 
+}

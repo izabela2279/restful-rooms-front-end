@@ -2,32 +2,22 @@
   margin-top: 90px;
   margin-left: 150px;
   margin-right:90px;
-  
-
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  gap: 60px;
-  
+  gap: 60px; 
 }
+
 .container h1 {
   font-size: 70px;
 }
+
 .container img{
-  width: 900px;
-  
- 
+  width: 900px; 
 }
-
-
-
-
 
 @media only screen and (max-width: 414px) {
- /* .container > #welcome {
-  width: 300px;
- } */
- .container h1 {
-  font-size: 30px;
-}
+  .container h1 {
+    font-size: 30px;
+  }
 }
