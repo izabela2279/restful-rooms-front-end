@@ -6,16 +6,16 @@ const NavBar = ({ user, handleLogout }) => {
 
   const publicLinks = (
     <ul>
-      <li><NavLink to="/login">LOG IN</NavLink></li>
-      <li><NavLink to="/signup">SIGN UP</NavLink></li>
+      <li><NavLink style={{textDecoration:"none",color: "blue"}} to="/login">LOG IN</NavLink></li>
+      <li><NavLink style={{textDecoration:"none", color: "blue"}} to="/signup">SIGN UP</NavLink></li>
     </ul>
   )
 
   const protectedLinks = (
-    <ul>
-      <li><NavLink to="/listings">LISTINGS</NavLink></li>
-      <li><NavLink to="/listings/new">NEW LISTING</NavLink></li>
-      <li><NavLink to="/logout" onClick={handleLogout}>LOG OUT</NavLink></li>
+    <ul >
+      <li><NavLink style={{textDecoration:"none", color: "blue"}} to="/listings">LISTINGS</NavLink></li>
+      <li><NavLink style={{textDecoration:"none",color: "blue"}} to="/listings/new">NEW LISTING</NavLink></li>
+      <li><NavLink style={{textDecoration:"none", color: "blue"}} to="/logout" onClick={handleLogout}>LOG OUT</NavLink></li>
     </ul>
   )
 
