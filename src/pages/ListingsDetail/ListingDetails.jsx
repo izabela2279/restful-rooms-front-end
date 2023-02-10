@@ -18,7 +18,6 @@ import { faTrash } from '@fortawesome/free-solid-svg-icons'
 import * as listingService from "../../services/listingService";
 
 const ListingDetails = (props) => {
-    console.log(props)
     const { id } = useParams()
     const [listing, setListing] = useState(null)
     useEffect(() => {
@@ -44,7 +43,6 @@ const ListingDetails = (props) => {
         setListing({ ...listing, reservations: [...(listing.reservations || []), newReservation] })
     }
     
-    console.log('Listing data', listing)
     if (!listing) return <h1>Loading</h1>
 
     return (

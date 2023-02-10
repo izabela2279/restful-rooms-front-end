@@ -41,7 +41,7 @@ const App = () => {
 
   const handleAddListing = async (listingData, photo) => {
     const newListing = await listingService.create(listingData)
-    console.log(newListing);
+
     if (photo) {
       newListing.photo = await listingPhotoHelper(photo, newListing._id)
     }
@@ -62,12 +62,11 @@ const App = () => {
   }
 
   const handleDeleteListing = async (id) => {
-    console.log('HANDLE DELETE LISTING IS WORKING')
+
     const deletedListing = await listingService.deleteListing(id)
     setListings(listings.filter(b => b._id !== deletedListing._id))
     navigate('/listings')
   }
-  console.log(handleDeleteListing)
 
   useEffect(() => {
     const fetchAllListings = async () => {
