@@ -5,12 +5,13 @@ const Landing = () => {
   return (
     <main className={ style.container}>
       <div id="welcome">
-      <h1> A place you can find your home away from home or share you home to weary engineers. </h1>
+      <h1> A place where you can find your home away from home. 
+      Offer and find your <b style={{color:"blue"}}>restfulRooms </b>here. </h1>
 
-      <h2> </h2>
+    
       </div>
       <div id="landing-image">
-        <img  id="landing-image"src='assets/Landing/landing-pic1.jpeg'></img>
+        <img  id="landing-image"src='assets/Landing/landingfinal.png'></img>
       </div>
      
     </main>
