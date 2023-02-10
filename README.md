@@ -1,7 +1,7 @@
 <h1>Restful Rooms!</h1>
 
 
-<img src="https://imgur.com/a/bDXOA5u" alt="restful-rooms">
+<img src="https://i.imgur.com/4oTCAop.png" alt="restful-rooms">
 
 <p>
 <em>Restful Rooms</em> is a platform for finding short-term accommodations for programmers who are traveling for work. Like Airbnb, it allows homeowners to rent out their spare rooms or entire homes to guests. However, Restful Rooms caters specifically to the needs of programmers, offering features such as fast Wi-Fi, ergonomic workspaces, and a quiet environment for coding. The goal of Restful Rooms is to create a welcoming and productive environment for programmers while they are away from home.</p>
