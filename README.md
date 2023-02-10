@@ -79,5 +79,4 @@ Check out the
  - [ ] Be able to edit and delete reservations. 
  - [ ] Be able to go to a page where I can see all my reservations.
  - [ ] Be able to see listings by rental types and location.
- - [ ] Be able to go to a page where I can see all my reservations.
  - [ ] AAU and a guest, I should be able to see a chat to ask questions. 
