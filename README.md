@@ -69,7 +69,7 @@
 <h2>Credits 🙌</h2>
 <li>
 Check out the
-<a href="">Attributions</a>
+<a href="https://github.com/izabela2279/restful-rooms-front-end/blob/main/Assets.md">Attributions</a>
 </li>
 
 <br>
