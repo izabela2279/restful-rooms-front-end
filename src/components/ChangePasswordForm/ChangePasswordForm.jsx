@@ -33,7 +33,7 @@ const ChangePasswordForm = props => {
   const { pw, newPw, newPwConf } = formData
 
   const isFormInvalid = () => {
-    return !(pw && newPw && newPw === newPwConf)
+  return !(pw && newPw && newPw === newPwConf)
   }
 
   return (
