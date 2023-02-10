@@ -14,7 +14,7 @@ const UserInfo = ({ content }) => {
         <h1> <FontAwesomeIcon icon={faUser} /></h1>}
       <section style={{display:'flex', flexDirection:"column", justifyContent:"flex-start", margin:0, opacity: .75}}>
         <h4 style={{height:0, margin:5}}>{content.author.name}</h4>
-     <DateCard createdAt={content.createdAt} />
+        <DateCard createdAt={content.createdAt} />
       </section>
     </div>
   )
