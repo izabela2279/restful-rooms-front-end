@@ -77,7 +77,7 @@ const ListingDetails = (props) => {
                         <Reservations reservations={listing.reservations} user={props.user} />
                     </section>
                 </div>
-                
+
                 <div>
                     <h2>{listing.amenities}</h2>
                     <ul>

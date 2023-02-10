@@ -4,7 +4,10 @@
   flex-direction: column;
 }
 
-.container input, textarea, select, button { 
+.container input,
+textarea,
+select,
+button {
   padding: 14px;
   font-size: 14px;
   border-radius: 5px;

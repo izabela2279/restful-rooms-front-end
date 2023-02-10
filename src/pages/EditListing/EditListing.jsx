@@ -31,6 +31,7 @@ const EditListing = (props) => {
             onChange={handleChange}
           />
         </div>
+
         <div>
           <label htmlFor="text-input">Location: </label>
           <input
@@ -43,6 +44,7 @@ const EditListing = (props) => {
             onChange={handleChange}
           />
         </div>
+
         <div>
           <label htmlFor="text-input">Price: </label>
           <input
@@ -55,6 +57,7 @@ const EditListing = (props) => {
             onChange={handleChange}
           />
         </div>
+
         <div>
           <label htmlFor="text-input">Description: </label>
           <textarea
@@ -67,6 +70,7 @@ const EditListing = (props) => {
             onChange={handleChange}
           />
         </div>
+
         <div>
           <label htmlFor="category-input">Bedrooms</label>
           <select
