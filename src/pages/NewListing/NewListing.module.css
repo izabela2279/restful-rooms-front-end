@@ -63,6 +63,8 @@
     width: 700px;
   }
 
-  .container select {
+  .container button {
+    background-color: #FF385C;
+    color: white;
     
   }
