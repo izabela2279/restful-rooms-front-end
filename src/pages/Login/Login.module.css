@@ -12,11 +12,11 @@
 }
 
 .container button {
-  color: black;
+  color: white;
   font-weight: 600;
   margin: 21px 0px 0px 0px;
   background: var(--primary);
-  background-color: rgb(178, 178, 227);
+  background-color: #FF385C;
 }
 
 .container input {
