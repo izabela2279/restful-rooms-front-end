@@ -1,7 +1,7 @@
 import { useState } from "react"
 import styles from './NewActivity.module.css'
 
-const NewActivity= (props) => {
+const NewActivity = (props) => {
   const [form, setForm] = useState({ text: '' })
 
   const handleChange = ({ target }) => {

@@ -42,7 +42,7 @@ const ListingDetails = (props) => {
         const newReservation = await listingService.createReservation(id, reservationData)
         setListing({ ...listing, reservations: [...(listing.reservations || []), newReservation] })
     }
-    
+
     if (!listing) return <h1>Loading</h1>
 
     return (
@@ -52,7 +52,6 @@ const ListingDetails = (props) => {
                     <h1>{listing.title}</h1>
 
                     <span style={{ display: "flex", justifyContent: "center", gap: 5 }}>
-                        {/* <AuthorInfo content={listing} /> */}
 
                         {listing.author._id === props.user.profile &&
                             <>
@@ -78,6 +77,7 @@ const ListingDetails = (props) => {
                         <Reservations reservations={listing.reservations} user={props.user} />
                     </section>
                 </div>
+                
                 <div>
                     <h2>{listing.amenities}</h2>
                     <ul>
@@ -95,8 +95,6 @@ const ListingDetails = (props) => {
                         <li>Phone Chargers android and apple compatible</li>
                     </ul>
                 </div>
-
-
 
                 <section>
                     <h1>Review  </h1>

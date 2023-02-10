@@ -2,15 +2,15 @@ import ReservationCard from "../ReservationCard/ReservationCard";
 
 const Reservations = (props) => {
     if (!props.reservations) return <h4>No Reservation</h4>
-    return(
+    return (
         <>
-        {props.reservations.map((reservation) => (
-            <ReservationCard
-            key= {reservation._id}
-            reservation={reservation}
-            user={props.user}
-            />
-        ))}
+            {props.reservations.map((reservation) => (
+                <ReservationCard
+                    key={reservation._id}
+                    reservation={reservation}
+                    user={props.user}
+                />
+            ))}
         </>
     )
 }

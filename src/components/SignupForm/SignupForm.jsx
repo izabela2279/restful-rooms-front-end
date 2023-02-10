@@ -60,6 +60,7 @@ const SignupForm = props => {
           onChange={handleChange}
         />
       </div>
+
       <div className={styles.inputContainer}>
         <label htmlFor="email" className={styles.label}></label>
         <input
@@ -72,6 +73,7 @@ const SignupForm = props => {
           onChange={handleChange}
         />
       </div>
+
       <div className={styles.inputContainer}>
         <label htmlFor="password" className={styles.label}></label>
         <input
@@ -84,6 +86,7 @@ const SignupForm = props => {
           onChange={handleChange}
         />
       </div>
+
       <div className={styles.inputContainer}>
         <label htmlFor="confirm" className={styles.label}>
         </label>
@@ -97,11 +100,13 @@ const SignupForm = props => {
           onChange={handleChange}
         />
       </div>
+
       <div className={styles.inputContainer}>
         <label htmlFor="photo-upload" className={styles.label}>
           Upload Photo
         </label>
-        <div/>
+        <div />
+
         <input
           type="file"
           id="photo-upload"
@@ -109,6 +114,7 @@ const SignupForm = props => {
           onChange={handleChangePhoto}
         />
       </div>
+
       <div className={styles.inputContainer}>
         <button disabled={isFormInvalid()} className={styles.button}>
           Sign Up

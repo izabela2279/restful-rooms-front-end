@@ -44,6 +44,7 @@ const LoginForm = props => {
           onChange={handleChange}
         />
       </div>
+
       <div className={styles.inputContainer}>
         <label htmlFor="password" className={styles.label}></label>
         <input
@@ -56,6 +57,7 @@ const LoginForm = props => {
           onChange={handleChange}
         />
       </div>
+
       <div>
         <button className={styles.button}>Log In</button>
         <Link to="/">

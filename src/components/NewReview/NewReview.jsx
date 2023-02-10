@@ -2,7 +2,6 @@ import { useState } from "react"
 import styles from './NewReview.module.css'
 
 // Components
-
 const NewReview = (props) => {
   const [form, setForm] = useState({ text: '' })
 

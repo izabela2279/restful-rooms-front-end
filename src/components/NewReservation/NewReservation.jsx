@@ -2,8 +2,8 @@ import { useState } from "react"
 import styles from './NewReservation.module.css'
 
 const NewReservation = (props) => {
-    
-    const [form, setForm] = useState({ dateCheckIn: '', dateCheckOut: '',guests: 1})
+
+    const [form, setForm] = useState({ dateCheckIn: '', dateCheckOut: '', guests: 1 })
 
     const handleChange = ({ target }) => {
         setForm({ ...form, [target.name]: target.value })
@@ -12,7 +12,7 @@ const NewReservation = (props) => {
     const handleSubmit = (e) => {
         e.preventDefault()
         props.handleAddReservation(form)
-        setForm({ dateCheckIn: '', dateCheckOut: '',guests: 1} )
+        setForm({ dateCheckIn: '', dateCheckOut: '', guests: 1 })
     }
 
     return (
