@@ -1,7 +1,6 @@
 import { NavLink } from 'react-router-dom'
 import './NavBar.css'
 
-
 const NavBar = ({ user, handleLogout }) => {
 
   const publicLinks = (

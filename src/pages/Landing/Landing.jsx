@@ -1,8 +1,7 @@
 import style from './Landing.module.css'
 import { Link } from 'react-router-dom'
 
-const Landing = () => {
-  
+const Landing = () => { 
   return (
     <main className={ style.container}>
       <div id="welcome">
@@ -13,9 +12,8 @@ const Landing = () => {
     
       </div>
       <div id="landing-image">
-        <img  id="landing-image"src='assets/Landing/landingfinal.png'></img>
+        <img alt="" id="landing-image"src='assets/Landing/landingfinal.png'></img>
       </div>
-     
     </main>
   )
 }

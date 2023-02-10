@@ -32,7 +32,6 @@
 
 .container button {
   color: #ffff;
- 
   font-weight: 600;
   margin: 21px 0px 0px 0px;
   background: var(--primary);
@@ -62,7 +61,6 @@ input:focus, select:focus, textarea:focus {
   border: 1px solid black;
   width: 700px;
 }
-
 
 form {
   display: grid;

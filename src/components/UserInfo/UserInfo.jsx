@@ -8,7 +8,6 @@ const UserInfo = ({ content }) => {
   
   return (
     <div className={styles.container} style={{display:'flex', flexDirection:'row', margin:0, gap:20}}>
-     
       {content.author.photo ?
         <img style={{ width:50, height:50, objectFit:'cover', borderRadius: 50}}src={content.author.photo} alt="The user's avatar" />:
         <h1> <FontAwesomeIcon icon={faUser} /></h1>}
