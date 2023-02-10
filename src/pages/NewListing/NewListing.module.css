@@ -6,6 +6,8 @@
     padding: 28px 21px;
     align-items: center;
     flex-direction: column;
+    margin-right: 100px;
+    margin-left: 100px;
   }
   
   .container input, textarea, select, button { 
@@ -49,5 +51,20 @@
   
   input:focus, select:focus, textarea:focus {
     outline: none;
-    border: 1px solid var(--primary);
+    border: 1px solid black;
   }
+  .container input {
+    border: 1px solid black;
+    width: 700px;
+  }
+
+  .container textarea {
+    border: 1px solid black;
+    width: 700px;
+  }
+
+  .container select {
+    
+  }
+
+  

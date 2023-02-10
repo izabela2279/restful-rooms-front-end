@@ -19,7 +19,8 @@ const EditListing = (props) => {
   return (
     <main className={styles.container}>
       <form onSubmit={handleSubmit}>
-        <label htmlFor="title-input">Title</label>
+        <div>
+        <label htmlFor="title-input">Title: </label>
         <input
           required
           type="text"
@@ -29,7 +30,9 @@ const EditListing = (props) => {
           placeholder="Title"
           onChange={handleChange}
         />
-        <label htmlFor="text-input">Location</label>
+        </div>
+        <div>
+        <label htmlFor="text-input">Location: </label>
         <input
           required
           type="text"
@@ -39,7 +42,9 @@ const EditListing = (props) => {
           placeholder="Location"
           onChange={handleChange}
         />
-        <label htmlFor="text-input">Price</label>
+        </div>
+        <div>
+        <label htmlFor="text-input">Price: </label>
         <input
           required
           type="text"
@@ -49,7 +54,9 @@ const EditListing = (props) => {
           placeholder="Price"
           onChange={handleChange}
         />
-         <label htmlFor="text-input">Description</label>
+        </div>
+        <div>
+         <label htmlFor="text-input">Description: </label>
 				<textarea
           required
           type="text"
@@ -59,6 +66,8 @@ const EditListing = (props) => {
           placeholder="Description"
           onChange={handleChange}
         />
+        </div>
+        <div>
         <label htmlFor="category-input">Bedrooms</label>
         <select
           required
@@ -76,6 +85,7 @@ const EditListing = (props) => {
           <option value="7">7</option>
           <option value="8">8</option>
         </select>
+        </div>
         
         <label htmlFor="category-input">Beds</label>
         <select
