@@ -3,3 +3,28 @@
   align-items: center;
   flex-direction: column;
 }
+
+.container input, textarea, select, button { 
+  padding: 14px;
+  font-size: 14px;
+  border-radius: 5px;
+  margin: 7px 0px 14px 0px;
+}
+
+.container button {
+  color: white;
+  font-weight: 600;
+  margin: 21px 0px 0px 0px;
+  background: var(--primary);
+  background-color: #FF385C;
+}
+
+.container input {
+  border: 1px solid black;
+  width: 300px;
+}
+
+.container label {
+  font-weight: 600;
+  margin: 7px 0px 14px 0px;
+}

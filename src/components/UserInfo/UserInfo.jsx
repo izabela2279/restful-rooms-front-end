@@ -12,9 +12,9 @@ const UserInfo = ({ content }) => {
       {content.author.photo ?
         <img style={{ width:50, height:50, objectFit:'cover', borderRadius: 50}}src={content.author.photo} alt="The user's avatar" />:
         <h1> <FontAwesomeIcon icon={faUser} /></h1>}
-      <section style={{display:'flex', flexDirection:"column" }}>
+      <section style={{display:'flex', flexDirection:"column", justifyContent:"flex-start" }}>
         <h4>{content.author.name}</h4>
-        <DateCard createdAt={content.createdAt} />
+       <DateCard createdAt={content.createdAt} />
       </section>
     </div>
   )
